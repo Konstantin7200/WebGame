@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "w+6jYyK8UEg=",
+  "success": true,
+  "projectFilePath": "D:\\DEV\\CourseWork\\backend\\backend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kosta\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.2\\microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
+    "C:\\Users\\kosta\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
