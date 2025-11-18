@@ -14,7 +14,6 @@ namespace backend.Infrastructure
         static public T readFromJson<T>(string path)
         {
             string str = File.ReadAllText(path);
-            Console.WriteLine(str);
             return JsonSerializer.Deserialize<T>(str);
         }
     }

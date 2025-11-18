@@ -50,6 +50,8 @@ builder.Services.AddCors(options =>
     });
 });
 Dictionary<(int, int),UnitDTO> UnitMap = new();
+UnitDTO lastUnit =new UnitDTO();
+builder.Services.AddSingleton(lastUnit);
 builder.Services.AddSingleton(UnitMap);
 builder.Services.AddSingleton<UnitGenerator>();
 builder.Services.AddControllers();

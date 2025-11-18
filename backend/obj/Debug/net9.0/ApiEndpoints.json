@@ -2,7 +2,7 @@
   {
     "ContainingType": "backend.Controllers.UnitController",
     "Method": "GetInitialUnits",
-    "RelativePath": "api/Unit",
+    "RelativePath": "api/Unit/Generation",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -15,6 +15,84 @@
           "application/json",
           "text/json"
         ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backend.Controllers.UnitController",
+    "Method": "GetReachableHexes",
+    "RelativePath": "api/Unit/GetHexesForUnit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "x",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "y",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[backend.DTOes.HexDTO, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backend.Controllers.UnitController",
+    "Method": "GetUnits",
+    "RelativePath": "api/Unit/GetUnits",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[backend.DTOes.UnitDTO, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backend.Controllers.UnitController",
+    "Method": "MoveUnitTo",
+    "RelativePath": "api/Unit/MoveUnitTo",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "x",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "y",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
         "StatusCode": 200
       }
     ]
