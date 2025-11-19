@@ -4,10 +4,10 @@ using backend.DTOes;
 using backend.Entities;
 using backend.Infrastructure;
 using backend.Services;
-using static backend.Entities.Unit;
+using static backend.Entities.UnitTemplate;
 
 
-/*var unit = new Unit(
+/*var unit = new UnitTemplate(
     health: 100,
     attacks: new List<Attack>
     {
@@ -20,23 +20,21 @@ using static backend.Entities.Unit;
         )
     },
     movesAmount: 2,
-    side: Unit.UnitSide.Yours,
     type: "HumanSwordsman"
 );
-var healer = new Healer(100, attacks:new List<Attack>{ new Attack(
+var healer = new HealerTemplate(100, attacks:new List<Attack>{ new Attack(
             attackName: "Fireball",
             attackType: Attack.AttackTypes.Ranged,
             damageType: Attack.DamageTypes.Fire,
             damage: 25,
             attacksAmount: 3
-        )}, 2, UnitSide.Yours, 25, "healer");
-List<Unit> otherUnits = new List<Unit>{unit,healer};
-List<Leader> leaders = new List<Leader>();
+        )}, 2, 25, "healer");
+List<UnitTemplate> otherUnits = new List<UnitTemplate>{unit,healer};
+List<LeaderTemplate> leaders = new List<LeaderTemplate>();
 Units units = new(otherUnits, leaders);
 File.Delete("units.json");
 MyJsonSerializer.writeToJson(units,"units.json");
-UnitGenerator.initialGeneration();*/
-
+*/
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,10 +47,12 @@ builder.Services.AddCors(options =>
               .AllowAnyHeader();
     });
 });
-Dictionary<(int, int),UnitDTO> UnitMap = new();
-UnitDTO lastUnit =new UnitDTO();
+Dictionary<(int, int),Unit> UnitMap = new();
+Unit lastUnit =new Unit();
+Turn currentTurn =new Turn();
 builder.Services.AddSingleton(lastUnit);
 builder.Services.AddSingleton(UnitMap);
+builder.Services.AddSingleton(currentTurn);
 builder.Services.AddSingleton<UnitGenerator>();
 builder.Services.AddControllers();
 var app=builder.Build();

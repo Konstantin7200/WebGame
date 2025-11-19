@@ -1,8 +1,8 @@
 ﻿namespace backend.Entities
 {
-    public class Leader:Unit
+    public class LeaderTemplate:UnitTemplate
     {
-        public Leader(int health, List<Attack> attacks, int movesAmount, UnitSide side, string type) : base(health, attacks, movesAmount, side, type) 
+        public LeaderTemplate(int health, List<Attack> attacks, int movesAmount,  string type) : base(health, attacks, movesAmount, type) 
         { 
 
         }

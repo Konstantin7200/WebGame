@@ -2,10 +2,10 @@
 {
     public class Units
     {
-        public List<Leader> Leaders { get; set; }
-        public List<Unit> OtherUnits { get; set; }
+        public List<LeaderTemplate> Leaders { get; set; }
+        public List<UnitTemplate> OtherUnits { get; set; }
 
-        public Units(List<Unit> otherUnits,List<Leader> leaders)
+        public Units(List<UnitTemplate> otherUnits,List<LeaderTemplate> leaders)
         {
             OtherUnits = otherUnits;
             Leaders = leaders;

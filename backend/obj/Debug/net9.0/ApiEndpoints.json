@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "backend.Controllers.UnitController",
+    "Method": "EndTurn",
+    "RelativePath": "api/Unit/EndTurn",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backend.Controllers.UnitController",
     "Method": "GetInitialUnits",
     "RelativePath": "api/Unit/Generation",
     "HttpMethod": "GET",
@@ -9,7 +25,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[backend.DTOes.UnitDTO, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[backend.DTOes.Unit, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -60,7 +76,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[backend.DTOes.UnitDTO, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[backend.DTOes.Unit, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -85,6 +101,11 @@
       },
       {
         "Name": "y",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "movesToReach",
         "Type": "System.Int32",
         "IsRequired": false
       }
