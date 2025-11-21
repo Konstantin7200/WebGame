@@ -1,4 +1,5 @@
 ﻿using backend.DTOes;
+using backend.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend.Services
@@ -8,6 +9,29 @@ namespace backend.Services
         int[,] movesEven = new int[,] { { 0, -1 }, { 1, -1 }, { -1, 0 }, { 1, 0 }, { 0, 1 }, { 1, 1 } };
         int[,] movesOdd = new int[,] { { -1, -1 }, { 0, -1 }, { -1, 0 }, { 1, 0 }, { -1, 1 }, { 0, 1 } };
         public const int MapSize = 7;
+        int[,] hexMas = new int[MapSize, MapSize];
+
+        public List<EnemiesHex> findEnemiesHexes(List<HexDTO> hexes,Unit pickedUnit)
+        {
+            Dictionary<(int, int), EnemiesHex> enemiesHexes = new Dictionary<(int, int), EnemiesHex>();
+            hexes.Add(new HexDTO(pickedUnit.X, pickedUnit.Y, 0));
+            foreach (HexDTO hex in hexes)
+            {
+                int[,] moves = hex.Y % 2 == 0 ? movesEven : movesOdd;
+                for (int i = 0; i < moves.GetLength(0); i++)
+                {
+                    if (checkIfHexExists(hex.X + moves[i, 0], hex.Y + moves[i, 1]))
+                        if(hexMas[hex.X + moves[i, 0], hex.Y + moves[i, 1]]==-2)
+                        {
+                            enemiesHexes.TryAdd((hex.X + moves[i, 0], hex.Y + moves[i, 1]), new EnemiesHex(hex.X + moves[i, 0], hex.Y + moves[i, 1], hex));
+                        }
+                }
+            }
+            hexes.RemoveAt(hexes.Count - 1);
+
+            return enemiesHexes.Values.ToList();
+        }
+
         bool checkIfHexExists(int X,int Y)
         {
             if(X>=0&&X<MapSize&&Y>=0&&Y<MapSize)
@@ -19,7 +43,7 @@ namespace backend.Services
         public List<HexDTO> findAvalibleHexes(Dictionary<(int,int),Unit> UnitMap, Unit pickedUnit,Unit lastUnit)
         {
             lastUnit.copy(pickedUnit);
-            int[,] hexMas = new int[MapSize, MapSize];
+            
             (int X, int Y) hex = new();
             foreach (var unit in UnitMap)
             {
@@ -64,11 +88,16 @@ namespace backend.Services
                     }
                 }
             }
-
-            foreach(var unit in UnitMap.Values)
+            foreach (var unit in UnitMap.Values)
             {
                 movesToReachMas[unit.X, unit.Y] = 0;
+                if(unit.Side!=pickedUnit.Side)
+                {
+                    hexMas[unit.X, unit.Y] = -2;
+                }
             }
+
+            
 
             List<HexDTO> result = new();
 
@@ -101,6 +130,13 @@ namespace backend.Services
                     return;
                 }
             }
+        }
+
+        public MovesDTO getAllMoves(Dictionary<(int, int), Unit> UnitMap, Unit pickedUnit, Unit lastUnit)
+        {
+            List<HexDTO> hexes = findAvalibleHexes(UnitMap, pickedUnit, lastUnit);
+            List<EnemiesHex> enemiesHexes = findEnemiesHexes(hexes,pickedUnit);
+            return new MovesDTO(hexes, enemiesHexes);
         }
     }
 }

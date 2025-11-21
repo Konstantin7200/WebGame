@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using backend.Entities;
+using System.Collections.Generic;
 
-namespace backend.Entities
+namespace backend.Templates
 {
     public class HealerTemplate:UnitTemplate
     {

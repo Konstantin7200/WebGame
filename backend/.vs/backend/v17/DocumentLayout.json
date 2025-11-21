@@ -3,32 +3,44 @@
   "WorkspaceRootPath": "D:\\DEV\\CourseWork\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\services\\turnender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:services\\turnender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\entities\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:entities\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\services\\pathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:services\\pathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\services\\battleengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:services\\battleengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\controllers\\unitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:controllers\\unitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\services\\unitgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:services\\unitgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\dtoes\\enemieshex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:dtoes\\enemieshex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\dtoes\\hexdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:dtoes\\hexdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\dtoes\\unitdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:dtoes\\unitdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\services\\pathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:services\\pathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\entities\\turn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:entities\\turn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\dtoes\\movesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:dtoes\\movesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\templates\\unittemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:templates\\unittemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\units.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:units.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,84 +50,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Turn.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Entities\\Turn.cs",
-              "RelativeDocumentMoniker": "Entities\\Turn.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Entities\\Turn.cs",
-              "RelativeToolTip": "Entities\\Turn.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Unit.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Entities\\Unit.cs",
+              "RelativeDocumentMoniker": "Entities\\Unit.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Entities\\Unit.cs",
+              "RelativeToolTip": "Entities\\Unit.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAA0wC0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T14:45:01.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UnitDTO.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\DTOes\\UnitDTO.cs",
-              "RelativeDocumentMoniker": "DTOes\\UnitDTO.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\DTOes\\UnitDTO.cs",
-              "RelativeToolTip": "DTOes\\UnitDTO.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAwwCgAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T14:42:12.231Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HexDTO.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\DTOes\\HexDTO.cs",
-              "RelativeDocumentMoniker": "DTOes\\HexDTO.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\DTOes\\HexDTO.cs",
-              "RelativeToolTip": "DTOes\\HexDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T14:42:11.305Z",
+              "WhenOpened": "2025-11-21T18:24:23.181Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PathFinder.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Services\\PathFinder.cs",
-              "RelativeDocumentMoniker": "Services\\PathFinder.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Services\\PathFinder.cs",
-              "RelativeToolTip": "Services\\PathFinder.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAYwFoAAAAcAAAAAAAAAA==",
+              "Title": "BattleEngine.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Services\\BattleEngine.cs",
+              "RelativeDocumentMoniker": "Services\\BattleEngine.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Services\\BattleEngine.cs",
+              "RelativeToolTip": "Services\\BattleEngine.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T14:26:35.874Z",
+              "WhenOpened": "2025-11-21T18:24:03.887Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TurnEnder.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Services\\TurnEnder.cs",
-              "RelativeDocumentMoniker": "Services\\TurnEnder.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Services\\TurnEnder.cs",
-              "RelativeToolTip": "Services\\TurnEnder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T14:21:45.629Z",
+              "DocumentIndex": 9,
+              "Title": "units.json",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\units.json",
+              "RelativeDocumentMoniker": "units.json",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\units.json",
+              "RelativeToolTip": "units.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-21T18:21:49.761Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADYAAAArAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "UnitTemplate.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Templates\\UnitTemplate.cs",
+              "RelativeDocumentMoniker": "Templates\\UnitTemplate.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Templates\\UnitTemplate.cs",
+              "RelativeToolTip": "Templates\\UnitTemplate.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T12:35:00.224Z",
+              "WhenOpened": "2025-11-21T17:08:24.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UnitGenerator.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Services\\UnitGenerator.cs",
+              "RelativeDocumentMoniker": "Services\\UnitGenerator.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Services\\UnitGenerator.cs",
+              "RelativeToolTip": "Services\\UnitGenerator.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T17:06:43.033Z",
               "EditorCaption": ""
             },
             {
@@ -126,9 +125,61 @@
               "RelativeDocumentMoniker": "Controllers\\UnitController.cs",
               "ToolTip": "D:\\DEV\\CourseWork\\backend\\Controllers\\UnitController.cs",
               "RelativeToolTip": "Controllers\\UnitController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAcwDEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwCsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T12:30:19.727Z",
+              "WhenOpened": "2025-11-20T11:21:45.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MovesDTO.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\DTOes\\MovesDTO.cs",
+              "RelativeDocumentMoniker": "DTOes\\MovesDTO.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\DTOes\\MovesDTO.cs",
+              "RelativeToolTip": "DTOes\\MovesDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T11:17:04.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PathFinder.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Services\\PathFinder.cs",
+              "RelativeDocumentMoniker": "Services\\PathFinder.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Services\\PathFinder.cs",
+              "RelativeToolTip": "Services\\PathFinder.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAgwC0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T10:37:52.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EnemiesHex.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\DTOes\\EnemiesHex.cs",
+              "RelativeDocumentMoniker": "DTOes\\EnemiesHex.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\DTOes\\EnemiesHex.cs",
+              "RelativeToolTip": "DTOes\\EnemiesHex.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T10:52:10.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HexDTO.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\DTOes\\HexDTO.cs",
+              "RelativeDocumentMoniker": "DTOes\\HexDTO.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\DTOes\\HexDTO.cs",
+              "RelativeToolTip": "DTOes\\HexDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T10:40:20.255Z",
               "EditorCaption": ""
             }
           ]

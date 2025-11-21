@@ -45,15 +45,58 @@ namespace backend.Controllers
             TurnEnder turnEnder = new TurnEnder();
             turnEnder.endTurn(_unitMap,_currentTurn);
         }
-        [HttpGet("GetHexesForUnit")]
-        public List<HexDTO> GetReachableHexes([FromQuery] int x, [FromQuery] int y)
+        [HttpGet("GetTurn")]
+        public Turn GetTurn()
         {
-            if (_currentTurn.currentTurn != _unitMap[(x, y)].Side)
+            return _currentTurn;
+        }
+        [HttpGet("GetHexesForUnit")]
+        public MovesDTO GetReachableHexes([FromQuery] int x, [FromQuery] int y)
+        {
+            if (_currentTurn.currentTurn != _unitMap[(x, y)].Side || _unitMap[(x,y)].attacked)
             {
-                return new List<HexDTO>();
+                return new MovesDTO(new List<HexDTO>(),new List<EnemiesHex>());
             }
             PathFinder pathFinder = new PathFinder();
-            return pathFinder.findAvalibleHexes(_unitMap, _unitMap[(x, y)],_lastUnit);
+            return pathFinder.getAllMoves(_unitMap, _unitMap[(x, y)],_lastUnit);
+        }
+        [HttpGet("GetUnit")]
+        public Unit GetUnit([FromQuery] int x, [FromQuery] int y)
+        {
+            return _unitMap[(x, y)];
+        }
+        [HttpGet("GetLastUnit")]
+        public Unit GetLastUnit()
+        {
+            return _lastUnit;
+        }
+        public class FightRequest
+        {
+            public Attack attack1 { get; set; }
+            public Attack attack2 { get; set; }
+            public int x1 { get; set; }
+            public int y1 { get; set; }
+            public int x2 { get; set; }
+            public int y2 { get; set; }
+        }
+        [HttpPost("Fight")]
+        public void Fight([FromBody] FightRequest data)
+        {
+            BattleEngine battleEngine = new BattleEngine();
+            int result=battleEngine.fight(_unitMap[(data.x1, data.y1)], _unitMap[(data.x2, data.y2)],data.attack1, data.attack2);
+            if(result==-1)
+            {
+                _unitMap.Remove((data.x1, data.y1));
+            }
+            else if (result == 1)
+            {
+                _unitMap.Remove((data.x2, data.y2));
+            }
+
+            foreach(var unit in _unitMap.Values)
+            {
+                Console.WriteLine(unit.X + " " + unit.Y);
+            }
         }
     }
 }

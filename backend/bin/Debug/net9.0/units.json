@@ -1,1 +1,20 @@
-{"Leaders":[],"OtherUnits":[{"$type":"unit","Health":100,"Attacks":[{"Damage":15,"AttacksAmount":2,"AttackName":"Sword Slash","DamageType":3,"AttackType":1}],"Type":"HumanSwordsman","MovesAmount":2},{"$type":"healer","HealingAmount":25,"Health":100,"Attacks":[{"Damage":25,"AttacksAmount":3,"AttackName":"Fireball","DamageType":1,"AttackType":0}],"Type":"healer","MovesAmount":2}]}
+{
+  "Leaders": [],
+  "OtherUnits": [
+    {
+      "$type": "unit",
+      "Health":50,
+      "Attacks": [
+        {
+          "Damage": 15,
+          "AttacksAmount": 2,
+          "AttackName": "Sword Slash",
+          "DamageType": 3,
+          "AttackType": 1
+        }
+      ],
+      "Type": "HumanSwordsman",
+      "MovesAmount": 2
+    }
+
+  ]}

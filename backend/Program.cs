@@ -1,10 +1,7 @@
-
-
-using backend.DTOes;
 using backend.Entities;
 using backend.Infrastructure;
 using backend.Services;
-using static backend.Entities.UnitTemplate;
+using static backend.Templates.UnitTemplate;
 
 
 /*var unit = new UnitTemplate(

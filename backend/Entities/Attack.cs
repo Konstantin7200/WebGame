@@ -30,5 +30,6 @@ namespace backend.Entities
             Damage = damage;
             AttacksAmount = attacksAmount;
         }
+        public Attack() { }
     }
 }

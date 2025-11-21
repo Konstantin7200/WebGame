@@ -1,6 +1,4 @@
-﻿using backend.DTOes;
-
-namespace backend.Entities
+﻿namespace backend.Entities
 {
     public class Turn
     {
