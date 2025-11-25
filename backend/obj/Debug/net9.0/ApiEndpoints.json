@@ -1,6 +1,26 @@
 [
   {
     "ContainingType": "backend.Controllers.UnitController",
+    "Method": "makeAITurn",
+    "RelativePath": "api/Unit/AITurn",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backend.Controllers.UnitController",
     "Method": "EndTurn",
     "RelativePath": "api/Unit/EndTurn",
     "HttpMethod": "PATCH",
@@ -41,18 +61,14 @@
     "ContainingType": "backend.Controllers.UnitController",
     "Method": "GetInitialUnits",
     "RelativePath": "api/Unit/Generation",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[backend.Entities.Unit, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
+        "Type": "System.Void",
+        "MediaTypes": [],
         "StatusCode": 200
       }
     ]
@@ -170,6 +186,26 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[backend.Entities.Unit, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backend.Controllers.UnitController",
+    "Method": "checkIfLeaderIsDead",
+    "RelativePath": "api/Unit/IsLeaderDead",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
         "MediaTypes": [
           "text/plain",
           "application/json",

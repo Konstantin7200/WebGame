@@ -1,9 +1,25 @@
 {
-  "Leaders": [],
+  "Leaders": [
+    {
+      "$type": "unit",
+      "Health": 50,
+      "Attacks": [
+        {
+          "Damage": 5,
+          "AttacksAmount": 2,
+          "AttackName": "Sword Slash",
+          "DamageType": 3,
+          "AttackType": 1
+        }
+      ],
+      "Type": "Lord",
+      "MovesAmount": 1
+    }
+  ],
   "OtherUnits": [
     {
       "$type": "unit",
-      "Health":50,
+      "Health": 70,
       "Attacks": [
         {
           "Damage": 15,
@@ -13,8 +29,30 @@
           "AttackType": 1
         }
       ],
-      "Type": "HumanSwordsman",
+      "Type": "Swordsman",
       "MovesAmount": 2
+    },
+    {
+      "$type": "unit",
+      "Health": 40,
+      "Attacks": [
+        {
+          "Damage": 3,
+          "AttacksAmount": 2,
+          "AttackName": "Dagger slash",
+          "DamageType": 3,
+          "AttackType": 1
+        },
+        {
+          "Damage": 15,
+          "AttacksAmount": 2,
+          "AttackName": "Bow shot",
+          "DamageType": 2,
+          "AttackType": 0
+        }
+      ],
+      "Type": "Archer",
+      "MovesAmount": 3
     }
 
   ]}

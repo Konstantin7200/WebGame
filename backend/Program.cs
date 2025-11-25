@@ -44,13 +44,9 @@ builder.Services.AddCors(options =>
               .AllowAnyHeader();
     });
 });
-Dictionary<(int, int),Unit> UnitMap = new();
-Unit lastUnit =new Unit();
-Turn currentTurn =new Turn();
-builder.Services.AddSingleton(lastUnit);
-builder.Services.AddSingleton(UnitMap);
-builder.Services.AddSingleton(currentTurn);
-builder.Services.AddSingleton<UnitGenerator>();
+
+GameState gameState = new(new(), new(), new());
+builder.Services.AddSingleton(gameState);
 builder.Services.AddControllers();
 var app=builder.Build();
 app.UseCors("AllowAll");

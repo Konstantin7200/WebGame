@@ -4,18 +4,19 @@ namespace backend.Entities
 {
     public class Unit
     {
-        public UnitTemplate BaseUnit { get; private set; }
+        public UnitTemplate BaseUnit { get; protected set; }
         public enum UnitSide : byte
         {
             Yours,
             Enemies
         }
-        public UnitSide Side { get; private set; }
+        public UnitSide Side { get; protected set; }
         public int X { get; set; }
         public int Y { get; set; }
         public int MovesLeft { get; set; }
-        public string Name { get; private set; }
+        public string Name { get; protected set; }
         public bool attacked;
+        public int Health { get; protected set; }
 
         string[] names = new[] { "Valera","Maksim","SanFran" };
 
@@ -28,19 +29,26 @@ namespace backend.Entities
             Y = y;
             MovesLeft = BaseUnit.MovesAmount;
             attacked = false;
+            Health = BaseUnit.Health;
         }
         public Unit()
         {
 
         }
-        public void copy(Unit otherUnit)
+        public virtual void copyFrom(Unit other)
         {
-            X = otherUnit.X;
-            Y = otherUnit.Y;
-            BaseUnit = otherUnit.BaseUnit;
-            Name = otherUnit.Name;
-            MovesLeft = otherUnit.MovesLeft;
-            Side = otherUnit.Side;
+            Health = other.Health;
+            X = other.X;
+            Y = other.Y;
+            BaseUnit = other.BaseUnit;
+            Name = other.Name;
+            MovesLeft = other.MovesLeft;
+            Side = other.Side;
+            attacked = other.attacked;
+        }
+        public virtual Unit createNew()
+        {
+            return new Unit();
         }
         public void resetMoves()
         {
@@ -49,11 +57,11 @@ namespace backend.Entities
         }
         public void takeDamage(int damage)
         {
-            BaseUnit.Health -= damage;
+            Health -= damage;
         }
         public bool isDead()
         {
-            return BaseUnit.Health <= 0;
+            return Health <= 0;
         }
     }
 }

@@ -4,7 +4,6 @@ using System.Text.Json.Serialization;
 namespace backend.Templates
 {
     [JsonDerivedType(typeof(HealerTemplate), "healer")]
-    [JsonDerivedType(typeof(LeaderTemplate), "leader")]
     [JsonDerivedType(typeof(UnitTemplate), "unit")]
     public class UnitTemplate
     {

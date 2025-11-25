@@ -14,7 +14,8 @@ namespace backend.Services
         public List<EnemiesHex> findEnemiesHexes(List<HexDTO> hexes,Unit pickedUnit)
         {
             Dictionary<(int, int), EnemiesHex> enemiesHexes = new Dictionary<(int, int), EnemiesHex>();
-            hexes.Add(new HexDTO(pickedUnit.X, pickedUnit.Y, 0));
+            hexes.Insert(0,new HexDTO(pickedUnit.X, pickedUnit.Y, 0));
+
             foreach (HexDTO hex in hexes)
             {
                 int[,] moves = hex.Y % 2 == 0 ? movesEven : movesOdd;
@@ -27,7 +28,7 @@ namespace backend.Services
                         }
                 }
             }
-            hexes.RemoveAt(hexes.Count - 1);
+            hexes.RemoveAt(0);
 
             return enemiesHexes.Values.ToList();
         }
@@ -40,10 +41,8 @@ namespace backend.Services
             }
             return false;
         }
-        public List<HexDTO> findAvalibleHexes(Dictionary<(int,int),Unit> UnitMap, Unit pickedUnit,Unit lastUnit)
+        public List<HexDTO> findAvalibleHexes(Dictionary<(int,int),Unit> UnitMap, Unit pickedUnit)
         {
-            lastUnit.copy(pickedUnit);
-            
             (int X, int Y) hex = new();
             foreach (var unit in UnitMap)
             {
@@ -109,32 +108,26 @@ namespace backend.Services
                         result.Add(new HexDTO(i, j, movesToReachMas[i, j]));
                     }
                 }
-
             return result;
         }
         public void moveToHex(Unit lastUnit,Dictionary<(int, int), Unit> UnitMap,int x,int  y,int movesToReach)
         {
-            Unit movedUnit = new Unit();
             lastUnit.MovesLeft -= movesToReach;
-            movedUnit.copy(lastUnit);
-            movedUnit.X = x;
-            movedUnit.Y = y;
-            foreach (var item in UnitMap)
-            {
-                if (item.Key == (lastUnit.X, lastUnit.Y))
-                {
-                    UnitMap.Remove(item.Key);
-                    UnitMap.Add((x, y), movedUnit);
-                    lastUnit.X = x;
-                    lastUnit.Y = y;
-                    return;
-                }
-            }
+            UnitMap.Remove((lastUnit.X, lastUnit.Y));
+            lastUnit.X = x;
+            lastUnit.Y = y;
+            Unit movedUnit = lastUnit.createNew();
+            movedUnit.copyFrom(lastUnit);
+            UnitMap.Add((x, y), movedUnit);
+        }
+        public void moveToHex(Unit lastUnit,Dictionary<(int,int),Unit> unitMap,HexDTO hex)
+        {
+            moveToHex(lastUnit, unitMap, hex.X, hex.Y, hex.Moves);
         }
 
-        public MovesDTO getAllMoves(Dictionary<(int, int), Unit> UnitMap, Unit pickedUnit, Unit lastUnit)
+        public MovesDTO getAllMoves(Dictionary<(int, int), Unit> UnitMap, Unit pickedUnit)
         {
-            List<HexDTO> hexes = findAvalibleHexes(UnitMap, pickedUnit, lastUnit);
+            List<HexDTO> hexes = findAvalibleHexes(UnitMap, pickedUnit);
             List<EnemiesHex> enemiesHexes = findEnemiesHexes(hexes,pickedUnit);
             return new MovesDTO(hexes, enemiesHexes);
         }

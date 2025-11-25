@@ -10,5 +10,6 @@
             this.hexes = hexes;
             this.enemiesHexes = enemiesHexes;
         }
+        public MovesDTO() { }
     }
 }
