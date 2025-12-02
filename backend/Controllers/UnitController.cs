@@ -14,36 +14,12 @@ namespace backend.Controllers
     public class UnitController : ControllerBase
     {
         GameState _gameState;
-        PlayerConfig _playerConfig;
 
-        public UnitController([FromServices] GameState gameState, PlayerConfig playerConfig)
+        public UnitController([FromServices] GameState gameState)
         {
             _gameState = gameState;
-            _playerConfig = playerConfig;
         }
-        [HttpPatch("EndTurn")]
-        public void EndTurn()
-        {
-            Console.WriteLine("TurnEnded");
-            TurnEnder turnEnder = new TurnEnder();
-            turnEnder.endTurn(_gameState.UnitMap, _gameState.CurrentTurn);
-        }
-        [HttpGet("GetTurn")]
-        public Turn GetTurn()
-        {
-            return _gameState.CurrentTurn;
-        }
-        public class Sides
-        {
-            public bool Side1 { get; set; }
-            public bool Side2 { get; set; }
-            public Sides() { }
-        }
-        [HttpPost("CreateConfig")]
-        public void createNewConfig([FromBody] Sides sides)
-        {
-            _playerConfig.createNewGame(sides.Side1, sides.Side2);
-        }
+        
         [HttpPost("Generation")]
         public void GetInitialUnits()
         {
@@ -120,17 +96,6 @@ namespace backend.Controllers
             return battleEngine.checkIfLeadersAreDead(_gameState.UnitMap);
         }
 
-        [HttpPost("AITurn")]
-        public bool makeAITurn()
-        {
-            AI ai = new AI(_gameState.UnitMap);
-            return ai.start(_gameState.CurrentTurn);
-        }
-        [HttpGet("GetNextTurn")]
-        public bool getNextTurn()
-        {
-            bool res=_playerConfig.isAI(Unit.UnitSide.Yours==_gameState.CurrentTurn.currentTurn);
-            return res;
-        }
+        
     }
 }

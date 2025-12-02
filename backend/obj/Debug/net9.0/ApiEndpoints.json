@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "backend.Controllers.UnitController",
+    "ContainingType": "backend.Controllers.GameController",
     "Method": "makeAITurn",
-    "RelativePath": "api/Unit/AITurn",
+    "RelativePath": "api/Game/AITurn",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -20,16 +20,16 @@
     ]
   },
   {
-    "ContainingType": "backend.Controllers.UnitController",
+    "ContainingType": "backend.Controllers.GameController",
     "Method": "createNewConfig",
-    "RelativePath": "api/Unit/CreateConfig",
+    "RelativePath": "api/Game/CreateConfig",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "sides",
-        "Type": "backend.Controllers.UnitController\u002BSides",
+        "Type": "backend.Controllers.GameController\u002BSides",
         "IsRequired": true
       }
     ],
@@ -42,9 +42,9 @@
     ]
   },
   {
-    "ContainingType": "backend.Controllers.UnitController",
+    "ContainingType": "backend.Controllers.GameController",
     "Method": "EndTurn",
-    "RelativePath": "api/Unit/EndTurn",
+    "RelativePath": "api/Game/EndTurn",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -53,6 +53,46 @@
       {
         "Type": "System.Void",
         "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backend.Controllers.GameController",
+    "Method": "getNextTurn",
+    "RelativePath": "api/Game/GetNextTurn",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backend.Controllers.GameController",
+    "Method": "GetTurn",
+    "RelativePath": "api/Game/GetTurn",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "backend.Entities.Turn",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
         "StatusCode": 200
       }
     ]
@@ -137,46 +177,6 @@
     "ReturnTypes": [
       {
         "Type": "backend.Entities.Unit",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "backend.Controllers.UnitController",
-    "Method": "getNextTurn",
-    "RelativePath": "api/Unit/GetNextTurn",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Boolean",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "backend.Controllers.UnitController",
-    "Method": "GetTurn",
-    "RelativePath": "api/Unit/GetTurn",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "backend.Entities.Turn",
         "MediaTypes": [
           "text/plain",
           "application/json",
