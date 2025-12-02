@@ -36,21 +36,6 @@ namespace backend.Entities
         {
 
         }
-        /*public virtual void copyFrom(Unit other)
-        {
-            Health = other.Health;
-            X = other.X;
-            Y = other.Y;
-            BaseUnit = other.BaseUnit;
-            Name = other.Name;
-            MovesLeft = other.MovesLeft;
-            Side = other.Side;
-            attacked = other.attacked;
-        }
-        public virtual Unit createNew()
-        {
-            return new Unit();
-        }*/
         public void resetMoves()
         {
             MovesLeft = BaseUnit.MovesAmount;

@@ -4,9 +4,9 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace backend.Services
 {
-    public class BattleEngine
+    public static class BattleEngine
     {
-        public void fight(Unit attacker, Unit defender, Attack attackersAttack, Attack defendersAttack, Dictionary<(int, int), Unit> unitMap)
+        public static void fight(Unit attacker, Unit defender, Attack attackersAttack, Attack defendersAttack, Dictionary<(int, int), Unit> unitMap)
         {
             Console.WriteLine("Fight "+attacker.X +" "+ attacker.Y +" "+ attacker.MovesLeft);
             attacker.attacked = true;
@@ -47,7 +47,7 @@ namespace backend.Services
             }
         }
 
-        public int checkIfLeadersAreDead(Dictionary<(int, int), Unit> unitMap)
+        public static int checkIfLeadersAreDead(Dictionary<(int, int), Unit> unitMap)
         {
             bool yourLeader = false;
             bool enemiesLeader= false;

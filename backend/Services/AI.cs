@@ -42,9 +42,8 @@ namespace backend.Services
             if(pickedUnit!=null&&hexToStepOn!=null)
             {
                 moveEngine.moveToHex(myUnit, _unitMap, hexToStepOn);
-                BattleEngine battleEngine = new BattleEngine();
                 (Attack, Attack) attackPair = pickAttack(myUnit, pickedUnit);
-                battleEngine.fight(myUnit, pickedUnit, attackPair.Item1, attackPair.Item2,_unitMap);
+                BattleEngine.fight(myUnit, pickedUnit, attackPair.Item1, attackPair.Item2,_unitMap);
             }
             else
             {

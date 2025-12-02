@@ -13,5 +13,18 @@ namespace backend.GameConfig
             LastUnit = lastUnit;
             CurrentTurn = currentTurn;
         }
+        public void endTurn()
+        {
+            CurrentTurn.switchTurn();
+            startNewTurn();
+        }
+        public void startNewTurn()
+        {
+            foreach (var unit in UnitMap.Values)
+            {
+                if (unit.Side == CurrentTurn.currentTurn)
+                    unit.resetMoves();
+            }
+        }
     }
 }

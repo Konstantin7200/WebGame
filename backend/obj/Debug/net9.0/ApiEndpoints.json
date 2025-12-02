@@ -59,26 +59,6 @@
   },
   {
     "ContainingType": "backend.Controllers.GameController",
-    "Method": "getNextTurn",
-    "RelativePath": "api/Game/GetNextTurn",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Boolean",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "backend.Controllers.GameController",
     "Method": "GetTurn",
     "RelativePath": "api/Game/GetTurn",
     "HttpMethod": "GET",
@@ -98,6 +78,26 @@
     ]
   },
   {
+    "ContainingType": "backend.Controllers.GameController",
+    "Method": "isNextPlayerAI",
+    "RelativePath": "api/Game/isNextPlayerAI",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "backend.Controllers.UnitController",
     "Method": "Fight",
     "RelativePath": "api/Unit/Fight",
@@ -107,7 +107,7 @@
     "Parameters": [
       {
         "Name": "data",
-        "Type": "backend.Controllers.UnitController\u002BFightRequest",
+        "Type": "backend.DTOes.FightRequestDTO",
         "IsRequired": true
       }
     ],

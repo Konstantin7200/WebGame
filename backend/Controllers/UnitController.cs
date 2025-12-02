@@ -72,28 +72,17 @@ namespace backend.Controllers
             pathFinder.moveToHex(_gameState.LastUnit, _gameState.UnitMap, x, y, movesToReach);
         }
 
-        public class FightRequest
-        {
-            public Attack attack1 { get; set; }
-            public Attack attack2 { get; set; }
-            public int x1 { get; set; }
-            public int y1 { get; set; }
-            public int x2 { get; set; }
-            public int y2 { get; set; }
-        }
-
+        
         [HttpPost("Fight")]
-        public void Fight([FromBody] FightRequest data)
+        public void Fight([FromBody] FightRequestDTO data)
         {
-            BattleEngine battleEngine = new BattleEngine();
-            battleEngine.fight(_gameState.UnitMap[(data.x1, data.y1)], _gameState.UnitMap[(data.x2, data.y2)], data.attack1, data.attack2, _gameState.UnitMap);
+            BattleEngine.fight(_gameState.UnitMap[(data.X1, data.Y1)], _gameState.UnitMap[(data.X2, data.Y2)], data.Attack1, data.Attack2, _gameState.UnitMap);
         }
 
         [HttpGet("IsLeaderDead")]
         public int checkIfLeaderIsDead()
         {
-            BattleEngine battleEngine = new BattleEngine();
-            return battleEngine.checkIfLeadersAreDead(_gameState.UnitMap);
+            return BattleEngine.checkIfLeadersAreDead(_gameState.UnitMap);
         }
 
         

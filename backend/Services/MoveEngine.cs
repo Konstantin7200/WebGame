@@ -9,9 +9,9 @@ namespace backend.Services
         int[,] movesEven = new int[,] { { 0, -1 }, { 1, -1 }, { -1, 0 }, { 1, 0 }, { 0, 1 }, { 1, 1 } };
         int[,] movesOdd = new int[,] { { -1, -1 }, { 0, -1 }, { -1, 0 }, { 1, 0 }, { -1, 1 }, { 0, 1 } };
         public const int MAPSIZE = 7;
-        int[,] hexMas = new int[MAPSIZE, MAPSIZE];
 
-        public List<EnemiesHex> findEnemiesHexes(List<HexDTO> hexes,Unit pickedUnit)
+
+        public List<EnemiesHex> findEnemiesHexes(List<HexDTO> hexes,Unit pickedUnit, int[,]hexMas)
         {
             Dictionary<(int, int), EnemiesHex> enemiesHexes = new Dictionary<(int, int), EnemiesHex>();
             hexes.Insert(0,new HexDTO(pickedUnit.X, pickedUnit.Y, 0));
@@ -41,7 +41,7 @@ namespace backend.Services
             }
             return false;
         }
-        public List<HexDTO> findAvalibleHexes(Dictionary<(int,int),Unit> UnitMap, Unit pickedUnit)
+        public List<HexDTO> findAvalibleHexes(Dictionary<(int,int),Unit> UnitMap, Unit pickedUnit,int[,]hexMas)
         {
             (int X, int Y) hex = new();
             foreach (var unit in UnitMap)
@@ -106,26 +106,11 @@ namespace backend.Services
                 }
             return result;
         }
-        public void moveToHex(Unit lastUnit,Dictionary<(int, int), Unit> UnitMap,int x,int  y,int movesToReach)
-        {
-            Console.WriteLine("MoveStart "+lastUnit.X + " " + lastUnit.Y + " " + lastUnit.MovesLeft);
-            lastUnit.MovesLeft -= movesToReach;
-            UnitMap.Remove((lastUnit.X, lastUnit.Y));
-            lastUnit.X = x;
-            lastUnit.Y = y;
-            /*Unit movedUnit = lastUnit.createNew();
-            movedUnit.copyFrom(lastUnit);*/
-            UnitMap.Add((x, y), lastUnit);
-            Console.WriteLine("MoveEnd "+lastUnit.X + " " + lastUnit.Y + " " + lastUnit.MovesLeft);
-        }
-        public void moveToHex(Unit lastUnit,Dictionary<(int,int),Unit> unitMap,HexDTO hex)
-        {
-            moveToHex(lastUnit, unitMap, hex.X, hex.Y, hex.Moves);
-        }
         public MovesDTO getAllMoves(Dictionary<(int, int), Unit> UnitMap, Unit pickedUnit)
         {
-            List<HexDTO> hexes = findAvalibleHexes(UnitMap, pickedUnit);
-            List<EnemiesHex> enemiesHexes = findEnemiesHexes(hexes,pickedUnit);
+            int[,] hexMas = new int[MAPSIZE, MAPSIZE];
+            List<HexDTO> hexes = findAvalibleHexes(UnitMap, pickedUnit,hexMas);
+            List<EnemiesHex> enemiesHexes = findEnemiesHexes(hexes,pickedUnit, hexMas);
             return new MovesDTO(hexes, enemiesHexes);
         }
         public List<HexDTO> findPathToClosestEnemy(Unit myUnit, Dictionary<(int, int), Unit> unitMap)
@@ -196,6 +181,22 @@ namespace backend.Services
                 }
             }
             return path;
+        }
+        public void moveToHex(Unit lastUnit, Dictionary<(int, int), Unit> UnitMap, int x, int y, int movesToReach)
+        {
+            Console.WriteLine("MoveStart " + lastUnit.X + " " + lastUnit.Y + " " + lastUnit.MovesLeft);
+            lastUnit.MovesLeft -= movesToReach;
+            UnitMap.Remove((lastUnit.X, lastUnit.Y));
+            lastUnit.X = x;
+            lastUnit.Y = y;
+            /*Unit movedUnit = lastUnit.createNew();
+            movedUnit.copyFrom(lastUnit);*/
+            UnitMap.Add((x, y), lastUnit);
+            Console.WriteLine("MoveEnd " + lastUnit.X + " " + lastUnit.Y + " " + lastUnit.MovesLeft);
+        }
+        public void moveToHex(Unit lastUnit, Dictionary<(int, int), Unit> unitMap, HexDTO hex)
+        {
+            moveToHex(lastUnit, unitMap, hex.X, hex.Y, hex.Moves);
         }
         public bool moveToClosestEnemy(Unit myUnit,Dictionary<(int,int),Unit> unitMap)
         {

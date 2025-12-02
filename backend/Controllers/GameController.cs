@@ -21,8 +21,7 @@ namespace backend.Controllers
         public void EndTurn()
         {
             Console.WriteLine("TurnEnded");
-            TurnEnder turnEnder = new TurnEnder();
-            turnEnder.endTurn(_gameState.UnitMap, _gameState.CurrentTurn);
+            _gameState.endTurn();
         }
         [HttpGet("GetTurn")]
         public Turn GetTurn()
@@ -35,8 +34,8 @@ namespace backend.Controllers
             AI ai = new AI(_gameState.UnitMap);
             return ai.start(_gameState.CurrentTurn);
         }
-        [HttpGet("GetNextTurn")]
-        public bool getNextTurn()
+        [HttpGet("isNextPlayerAI")]
+        public bool isNextPlayerAI()
         {
             bool res = _playerConfig.isAI(Unit.UnitSide.Yours == _gameState.CurrentTurn.currentTurn);
             return res;
