@@ -8,6 +8,7 @@ namespace backend.Services
     {
         public void fight(Unit attacker, Unit defender, Attack attackersAttack, Attack defendersAttack, Dictionary<(int, int), Unit> unitMap)
         {
+            Console.WriteLine("Fight "+attacker.X +" "+ attacker.Y +" "+ attacker.MovesLeft);
             attacker.attacked = true;
             int aAttacksLeft = attackersAttack.AttacksAmount;
             int dAttacksLeft = defendersAttack.AttacksAmount;
@@ -17,7 +18,7 @@ namespace backend.Services
 
                 if (aAttacksLeft != 0)
                 {
-                    defender.takeDamage(attackersAttack.Damage * 1);
+                    defender.takeDamage(attackersAttack.Damage * (1 - defender.BaseUnit.Resistances[attackersAttack.DamageType]));
                     aAttacksLeft -= 1;
                     if (defender.isDead())
                     {
@@ -27,19 +28,17 @@ namespace backend.Services
                 }
                 if (dAttacksLeft != 0)
                 {
-                    attacker.takeDamage(defendersAttack.Damage * 1);
+                    attacker.takeDamage(defendersAttack.Damage * (1 - attacker.BaseUnit.Resistances[defendersAttack.DamageType]));
                     dAttacksLeft -= 1;
                     if (attacker.isDead())
                     {
                         result = -1;
                         break;
                     }
-
-                    
                 }
             }
             if (result == -1)
-            {
+            {    
                 unitMap.Remove((attacker.X, attacker.Y));
             }
             else if (result == 1)
@@ -66,17 +65,14 @@ namespace backend.Services
                     }
                     if (yourLeader && enemiesLeader)
                     {
-                        Console.WriteLine("Everyone is alive");
                         return 0;
                     }
                 }
             }
             if (yourLeader)
             {
-                Console.WriteLine("EnemyDied");
                 return -1;
             }
-            Console.WriteLine("YouDied");
             return 1; 
         }
     }

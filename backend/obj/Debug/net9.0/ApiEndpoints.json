@@ -21,6 +21,28 @@
   },
   {
     "ContainingType": "backend.Controllers.UnitController",
+    "Method": "createNewConfig",
+    "RelativePath": "api/Unit/CreateConfig",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sides",
+        "Type": "backend.Controllers.UnitController\u002BSides",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backend.Controllers.UnitController",
     "Method": "EndTurn",
     "RelativePath": "api/Unit/EndTurn",
     "HttpMethod": "PATCH",
@@ -115,6 +137,26 @@
     "ReturnTypes": [
       {
         "Type": "backend.Entities.Unit",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backend.Controllers.UnitController",
+    "Method": "getNextTurn",
+    "RelativePath": "api/Unit/GetNextTurn",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
         "MediaTypes": [
           "text/plain",
           "application/json",

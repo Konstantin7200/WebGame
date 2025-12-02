@@ -1,4 +1,6 @@
-﻿namespace backend.Entities
+﻿using backend.Entities;
+
+namespace backend.GameConfig
 {
     public class GameState
     {

@@ -1,6 +1,8 @@
 using backend.Entities;
+using backend.GameConfig;
 using backend.Infrastructure;
 using backend.Services;
+using backend.Templates;
 using static backend.Templates.UnitTemplate;
 
 
@@ -16,21 +18,21 @@ using static backend.Templates.UnitTemplate;
             attacksAmount: 2
         )
     },
+    resistances:new Dictionary<Attack.DamageTypes, double> {
+        { Attack.DamageTypes.Arcane,0 },
+        { Attack.DamageTypes.Fire,0 },
+        { Attack.DamageTypes.Smash,0 },
+        { Attack.DamageTypes.Slash,0 },
+        { Attack.DamageTypes.Pierce,0 }
+    },
     movesAmount: 2,
     type: "HumanSwordsman"
 );
-var healer = new HealerTemplate(100, attacks:new List<Attack>{ new Attack(
-            attackName: "Fireball",
-            attackType: Attack.AttackTypes.Ranged,
-            damageType: Attack.DamageTypes.Fire,
-            damage: 25,
-            attacksAmount: 3
-        )}, 2, 25, "healer");
-List<UnitTemplate> otherUnits = new List<UnitTemplate>{unit,healer};
-List<LeaderTemplate> leaders = new List<LeaderTemplate>();
+List<UnitTemplate> otherUnits = new List<UnitTemplate> { unit};
+List<UnitTemplate> leaders = new List<UnitTemplate>();
 Units units = new(otherUnits, leaders);
 File.Delete("units.json");
-MyJsonSerializer.writeToJson(units,"units.json");
+MyJsonSerializer.writeToJson(units, "units.json");
 */
 
 var builder = WebApplication.CreateBuilder(args);
@@ -44,9 +46,10 @@ builder.Services.AddCors(options =>
               .AllowAnyHeader();
     });
 });
-
+PlayerConfig playerConfig = new();
 GameState gameState = new(new(), new(), new());
 builder.Services.AddSingleton(gameState);
+builder.Services.AddSingleton(playerConfig);
 builder.Services.AddControllers();
 var app=builder.Build();
 app.UseCors("AllowAll");

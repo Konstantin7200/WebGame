@@ -2,10 +2,10 @@
   "Leaders": [
     {
       "$type": "unit",
-      "Health": 50,
+      "Health": 100,
       "Attacks": [
         {
-          "Damage": 5,
+          "Damage": 15,
           "AttacksAmount": 2,
           "AttackName": "Sword Slash",
           "DamageType": 3,
@@ -13,13 +13,20 @@
         }
       ],
       "Type": "Lord",
-      "MovesAmount": 1
+      "MovesAmount": 2,
+      "Resistances": {
+        "Arcane": 0,
+        "Fire": 0,
+        "Smash": 0,
+        "Slash": 0,
+        "Pierce": 0
+      }
     }
   ],
   "OtherUnits": [
     {
       "$type": "unit",
-      "Health": 70,
+      "Health": 100,
       "Attacks": [
         {
           "Damage": 15,
@@ -30,29 +37,14 @@
         }
       ],
       "Type": "Swordsman",
-      "MovesAmount": 2
-    },
-    {
-      "$type": "unit",
-      "Health": 40,
-      "Attacks": [
-        {
-          "Damage": 3,
-          "AttacksAmount": 2,
-          "AttackName": "Dagger slash",
-          "DamageType": 3,
-          "AttackType": 1
-        },
-        {
-          "Damage": 15,
-          "AttacksAmount": 2,
-          "AttackName": "Bow shot",
-          "DamageType": 2,
-          "AttackType": 0
-        }
-      ],
-      "Type": "Archer",
-      "MovesAmount": 3
+      "MovesAmount": 2,
+      "Resistances": {
+        "Arcane": 0,
+        "Fire": 0,
+        "Smash": 0,
+        "Slash": 0,
+        "Pierce": 0
+      }
     }
-
-  ]}
+  ]
+}

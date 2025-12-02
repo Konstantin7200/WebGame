@@ -1,4 +1,5 @@
 ﻿using backend.Templates;
+using Microsoft.AspNetCore.Mvc;
 
 namespace backend.Entities
 {
@@ -35,7 +36,7 @@ namespace backend.Entities
         {
 
         }
-        public virtual void copyFrom(Unit other)
+        /*public virtual void copyFrom(Unit other)
         {
             Health = other.Health;
             X = other.X;
@@ -49,15 +50,15 @@ namespace backend.Entities
         public virtual Unit createNew()
         {
             return new Unit();
-        }
+        }*/
         public void resetMoves()
         {
             MovesLeft = BaseUnit.MovesAmount;
             attacked = false;
         }
-        public void takeDamage(int damage)
+        public void takeDamage(double damage)
         {
-            Health -= damage;
+            Health -=(int)damage;
         }
         public bool isDead()
         {

@@ -13,44 +13,43 @@ namespace backend.Services
 
         public bool start(Turn currentTurn)
         {
-            List<Unit> units = new();
+            /*foreach(var unit in _unitMap.Values)
+            {
+                if(unit.Side==currentTurn.currentTurn)
+                {
+                    Console.WriteLine(unit.X + " " + unit.Y+" "+unit.MovesLeft+" "+unit.attacked);
+                }
+            }
+            Console.WriteLine("______________________________________");*/
             foreach(var unit in _unitMap.Values)
             {
                 if (unit.Side == currentTurn.currentTurn && unit.MovesLeft != 0&&!unit.attacked)
                 {
-                    Console.WriteLine(unit.X + " " + unit.Y +" "+ unit.MovesLeft);
                     makeAMove(unit);
                     return true;
                 }
             }
-            
-            Console.WriteLine(false);
             return false;
 
         }
         public void makeAMove(Unit myUnit)
         {
-            PathFinder pathfinder = new PathFinder();
-            MovesDTO moves=pathfinder.getAllMoves(_unitMap,myUnit);
+            MoveEngine moveEngine = new MoveEngine();
+            MovesDTO moves=moveEngine.getAllMoves(_unitMap,myUnit);
             HexDTO hexToStepOn;
             Unit pickedUnit;
-            Console.WriteLine("MyHex" + myUnit.X +" "+myUnit.Y);
-            foreach(EnemiesHex hex in moves.enemiesHexes)
-            {
-                Console.WriteLine(hex.X + " " + hex.Y);
-            }
             (pickedUnit,hexToStepOn)=findTheBestOpponent(moves.enemiesHexes);
             if(pickedUnit!=null&&hexToStepOn!=null)
             {
-                Console.WriteLine("Picked opponent "+pickedUnit.X + " " + pickedUnit.Y);
-                (Attack,Attack) attackPair=pickAttack(myUnit, pickedUnit);
+                moveEngine.moveToHex(myUnit, _unitMap, hexToStepOn);
                 BattleEngine battleEngine = new BattleEngine();
+                (Attack, Attack) attackPair = pickAttack(myUnit, pickedUnit);
                 battleEngine.fight(myUnit, pickedUnit, attackPair.Item1, attackPair.Item2,_unitMap);
-                pathfinder.moveToHex(myUnit, _unitMap, hexToStepOn); 
             }
             else
             {
-                moveRandomly(moves, myUnit);
+                if (!moveEngine.moveToClosestEnemy(myUnit, _unitMap))
+                    moveRandomly(moves,myUnit);
             }
         }
         public (Unit?,HexDTO?) findTheBestOpponent(List<EnemiesHex> enemiesHexes)
@@ -86,7 +85,7 @@ namespace backend.Services
                     if (attack.AttackType == othersPotentialAttack.AttackType)
                         othersAttack = othersPotentialAttack;
                 }
-                (newAttackValue,newDamageDiff)=calculateAttackValueAndDiff(attack, othersAttack);
+                (newAttackValue,newDamageDiff)=calculateAttackValueAndDiff(attack, othersAttack,ourUnit,pickedUnit);
                 if(attackValue<newAttackValue)
                 {
                     attackPair = (attack, othersAttack);
@@ -99,12 +98,12 @@ namespace backend.Services
 
             return attackPair;
         }
-        public (double,int) calculateAttackValueAndDiff(Attack yourAttack,Attack othersAttack)
+        public (double,int) calculateAttackValueAndDiff(Attack attackersAttack,Attack defendersAttack,Unit attacker,Unit defender)
         {
             double value=int.MaxValue;
-            if (othersAttack.Damage!=0)
-                value = 1.0 * yourAttack.Damage * yourAttack.AttacksAmount / othersAttack.Damage / othersAttack.AttacksAmount;
-            int damageDiff = yourAttack.Damage * yourAttack.AttacksAmount - othersAttack.Damage * othersAttack.AttacksAmount;
+            if (defendersAttack.Damage!=0)
+                value = 1.0 *Math.Floor(attackersAttack.Damage * attackersAttack.AttacksAmount * (1 - defender.BaseUnit.Resistances[attackersAttack.DamageType])) / Math.Floor(defendersAttack.Damage * defendersAttack.AttacksAmount * (1 - attacker.BaseUnit.Resistances[defendersAttack.DamageType]));
+            int damageDiff = (int)(attackersAttack.Damage * attackersAttack.AttacksAmount* (1 - defender.BaseUnit.Resistances[attackersAttack.DamageType])) - (int)(defendersAttack.Damage * defendersAttack.AttacksAmount* (1 - attacker.BaseUnit.Resistances[defendersAttack.DamageType]));
             return (value, damageDiff);
         }
         /*public void moveToTheEnemyLeader()
@@ -113,7 +112,7 @@ namespace backend.Services
         }*/
         public void moveRandomly(MovesDTO moves,Unit myUnit)
         {
-            PathFinder pathFinder = new PathFinder();
+            MoveEngine pathFinder = new MoveEngine();
             List<HexDTO> hexes=new();
             foreach(HexDTO hex in moves.hexes)
             {
@@ -121,7 +120,6 @@ namespace backend.Services
                     hexes.Add(hex);
             }
             pathFinder.moveToHex(myUnit, _unitMap, hexes[Random.Shared.Next(0, hexes.Count)]);
-            
         }
 
     }

@@ -5,7 +5,7 @@
         public Unit.UnitSide currentTurn { get; private set; }
         public Turn()
         {
-            currentTurn = Unit.UnitSide.Yours;
+            currentTurn = Unit.UnitSide.Enemies;
         }
         public void switchTurn()
         {
