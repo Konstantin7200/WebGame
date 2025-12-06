@@ -1,4 +1,5 @@
-﻿using backend.Entities;
+﻿using backend.DTOes;
+using backend.Entities;
 using backend.GameConfig;
 using backend.Services;
 using Microsoft.AspNetCore.Http;
@@ -20,15 +21,9 @@ namespace backend.Controllers
         [HttpPatch("EndTurn")]
         public void EndTurn()
         {
-            Console.WriteLine("TurnEnded");
             _gameState.endTurn();
         }
-        [HttpGet("GetTurn")]
-        public Turn GetTurn()
-        {
-            return _gameState.CurrentTurn;
-        }
-        [HttpPost("AITurn")]
+        [HttpPost("AIMove")]
         public bool makeAITurn()
         {
             AI ai = new AI(_gameState.UnitMap);
@@ -37,19 +32,12 @@ namespace backend.Controllers
         [HttpGet("isNextPlayerAI")]
         public bool isNextPlayerAI()
         {
-            bool res = _playerConfig.isAI(Unit.UnitSide.Yours == _gameState.CurrentTurn.currentTurn);
-            return res;
+            return _playerConfig.isAI(Unit.UnitSide.Yours == _gameState.CurrentTurn.currentTurn);
         }
-        public class Sides
+        [HttpPost("StartGame")]
+        public void startGame([FromBody] PlayerTypes playerTypes,PlayerConfig playerConfig)
         {
-            public bool Side1 { get; set; }
-            public bool Side2 { get; set; }
-            public Sides() { }
-        }
-        [HttpPost("CreateConfig")]
-        public void createNewConfig([FromBody] Sides sides)
-        {
-            _playerConfig.createNewGame(sides.Side1, sides.Side2);
+            _gameState.startNewGame(playerTypes,playerConfig);
         }
     }
 }

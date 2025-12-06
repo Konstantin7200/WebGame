@@ -35,7 +35,7 @@ namespace backend.Services
         public void makeAMove(Unit myUnit)
         {
             MoveEngine moveEngine = new MoveEngine();
-            MovesDTO moves=moveEngine.getAllMoves(_unitMap,myUnit);
+            MovesDTO moves=moveEngine.getAllMoves(_unitMap,myUnit,myUnit.Side);
             HexDTO hexToStepOn;
             Unit pickedUnit;
             (pickedUnit,hexToStepOn)=findTheBestOpponent(moves.enemiesHexes);
@@ -87,10 +87,14 @@ namespace backend.Services
                 (newAttackValue,newDamageDiff)=calculateAttackValueAndDiff(attack, othersAttack,ourUnit,pickedUnit);
                 if(attackValue<newAttackValue)
                 {
+                    attackValue = newAttackValue;
+                    damageDiff=newDamageDiff;
                     attackPair = (attack, othersAttack);
                 }
                 else if(attackValue==newAttackValue&&damageDiff<newDamageDiff)
                 {
+                    attackValue = newAttackValue;
+                    damageDiff = newDamageDiff;
                     attackPair = (attack, othersAttack);
                 }
             }
@@ -99,7 +103,7 @@ namespace backend.Services
         }
         public (double,int) calculateAttackValueAndDiff(Attack attackersAttack,Attack defendersAttack,Unit attacker,Unit defender)
         {
-            double value=int.MaxValue;
+            double value = 10000;
             if (defendersAttack.Damage!=0)
                 value = 1.0 *Math.Floor(attackersAttack.Damage * attackersAttack.AttacksAmount * (1 - defender.BaseUnit.Resistances[attackersAttack.DamageType])) / Math.Floor(defendersAttack.Damage * defendersAttack.AttacksAmount * (1 - attacker.BaseUnit.Resistances[defendersAttack.DamageType]));
             int damageDiff = (int)(attackersAttack.Damage * attackersAttack.AttacksAmount* (1 - defender.BaseUnit.Resistances[attackersAttack.DamageType])) - (int)(defendersAttack.Damage * defendersAttack.AttacksAmount* (1 - attacker.BaseUnit.Resistances[defendersAttack.DamageType]));

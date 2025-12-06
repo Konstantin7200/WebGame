@@ -2,7 +2,7 @@
   {
     "ContainingType": "backend.Controllers.GameController",
     "Method": "makeAITurn",
-    "RelativePath": "api/Game/AITurn",
+    "RelativePath": "api/Game/AIMove",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -21,28 +21,6 @@
   },
   {
     "ContainingType": "backend.Controllers.GameController",
-    "Method": "createNewConfig",
-    "RelativePath": "api/Game/CreateConfig",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "sides",
-        "Type": "backend.Controllers.GameController\u002BSides",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "backend.Controllers.GameController",
     "Method": "EndTurn",
     "RelativePath": "api/Game/EndTurn",
     "HttpMethod": "PATCH",
@@ -53,26 +31,6 @@
       {
         "Type": "System.Void",
         "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "backend.Controllers.GameController",
-    "Method": "GetTurn",
-    "RelativePath": "api/Game/GetTurn",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "backend.Entities.Turn",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
         "StatusCode": 200
       }
     ]
@@ -98,16 +56,16 @@
     ]
   },
   {
-    "ContainingType": "backend.Controllers.UnitController",
-    "Method": "Fight",
-    "RelativePath": "api/Unit/Fight",
+    "ContainingType": "backend.Controllers.GameController",
+    "Method": "startGame",
+    "RelativePath": "api/Game/StartGame",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "data",
-        "Type": "backend.DTOes.FightRequestDTO",
+        "Name": "playerTypes",
+        "Type": "backend.DTOes.PlayerTypes",
         "IsRequired": true
       }
     ],
@@ -121,12 +79,18 @@
   },
   {
     "ContainingType": "backend.Controllers.UnitController",
-    "Method": "GetInitialUnits",
-    "RelativePath": "api/Unit/Generation",
+    "Method": "Fight",
+    "RelativePath": "api/Unit/Fight",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "backend.DTOes.FightRequestDTO",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Void",

@@ -14,20 +14,11 @@ namespace backend.Controllers
     public class UnitController : ControllerBase
     {
         GameState _gameState;
-
         public UnitController([FromServices] GameState gameState)
         {
             _gameState = gameState;
         }
         
-        [HttpPost("Generation")]
-        public void GetInitialUnits()
-        {
-            Console.WriteLine("___________________________________________");
-            _gameState.CurrentTurn =new Turn();
-            UnitGenerator unitGenerator = new(_gameState.UnitMap);
-            unitGenerator.initialGeneration();
-        }
         [HttpGet("GetUnits")]
         public List<Unit> GetUnits()
         {
@@ -49,27 +40,19 @@ namespace backend.Controllers
         [HttpGet("GetHexesForUnit")]
         public MovesDTO GetReachableHexes([FromQuery] int x, [FromQuery] int y)
         {
-            if (!_gameState.UnitMap.ContainsKey((x, y)))
-                return new MovesDTO(new(), new());
-
-            if (_gameState.CurrentTurn.currentTurn != _gameState.UnitMap[(x, y)].Side || _gameState.UnitMap[(x, y)].attacked)
-            {
-                return new MovesDTO(new List<HexDTO>(), new List<EnemiesHex>());
-            }
-
-            MoveEngine pathFinder = new MoveEngine();
+            MoveEngine moveEngine = new MoveEngine();
 
             _gameState.LastUnit = _gameState.UnitMap[(x, y)];
 
-            MovesDTO result = pathFinder.getAllMoves(_gameState.UnitMap, _gameState.UnitMap[(x, y)]);
-            return result;
+            return moveEngine.getAllMoves(_gameState.UnitMap, _gameState.UnitMap[(x, y)],_gameState.CurrentTurn.currentTurn);
         }
 
         [HttpPatch("MoveUnitTo")]
         public void MoveUnitTo([FromQuery] int x, [FromQuery] int y, [FromQuery] int movesToReach)
         {
-            MoveEngine pathFinder = new MoveEngine();
-            pathFinder.moveToHex(_gameState.LastUnit, _gameState.UnitMap, x, y, movesToReach);
+            Console.WriteLine("sadasd");
+            MoveEngine moveEngine = new MoveEngine();
+            moveEngine.moveToHex(_gameState.LastUnit, _gameState.UnitMap, x, y, movesToReach);
         }
 
         

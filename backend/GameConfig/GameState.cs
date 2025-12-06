@@ -1,4 +1,8 @@
-﻿using backend.Entities;
+﻿using backend.DTOes;
+using backend.Entities;
+using backend.Services;
+using Microsoft.AspNetCore.Mvc;
+using static backend.Controllers.GameController;
 
 namespace backend.GameConfig
 {
@@ -25,6 +29,13 @@ namespace backend.GameConfig
                 if (unit.Side == CurrentTurn.currentTurn)
                     unit.resetMoves();
             }
+        }
+        public void startNewGame(PlayerTypes playerTypes, [FromServices] PlayerConfig _playerConfig)
+        {
+            _playerConfig.createNewGame(playerTypes.PlayerType1, playerTypes.PlayerType2);
+            CurrentTurn = new Turn();
+            UnitGenerator unitGenerator = new(UnitMap);
+            unitGenerator.initialGeneration();
         }
     }
 }
