@@ -40,17 +40,16 @@ namespace backend.Controllers
         [HttpGet("GetHexesForUnit")]
         public MovesDTO GetReachableHexes([FromQuery] int x, [FromQuery] int y)
         {
+            if (!_gameState.UnitMap.ContainsKey((x, y)))
+                return new MovesDTO();
             MoveEngine moveEngine = new MoveEngine();
-
             _gameState.LastUnit = _gameState.UnitMap[(x, y)];
-
             return moveEngine.getAllMoves(_gameState.UnitMap, _gameState.UnitMap[(x, y)],_gameState.CurrentTurn.currentTurn);
         }
 
         [HttpPatch("MoveUnitTo")]
         public void MoveUnitTo([FromQuery] int x, [FromQuery] int y, [FromQuery] int movesToReach)
         {
-            Console.WriteLine("sadasd");
             MoveEngine moveEngine = new MoveEngine();
             moveEngine.moveToHex(_gameState.LastUnit, _gameState.UnitMap, x, y, movesToReach);
         }
