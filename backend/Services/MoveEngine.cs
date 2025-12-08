@@ -13,10 +13,10 @@ namespace backend.Services
         {
             if (turn != pickedUnit.Side || pickedUnit.attacked)
             {
-                return new MovesDTO(new List<HexDTO>(), new List<EnemiesHex>());
+                return new MovesDTO(new List<Hex>(), new List<EnemiesHex>());
             }
             int[,] hexMas = new int[MAPSIZE, MAPSIZE];
-            List<HexDTO> hexes = PathFinder.findFreeHexes(UnitMap, pickedUnit, hexMas);
+            List<Hex> hexes = PathFinder.findFreeHexes(UnitMap, pickedUnit, hexMas);
             List<EnemiesHex> enemiesHexes = PathFinder.findEnemiesHexes(hexes, pickedUnit, hexMas);
             return new MovesDTO(hexes, enemiesHexes);
         }
@@ -32,7 +32,7 @@ namespace backend.Services
             UnitMap.Add((x, y), lastUnit);
             Console.WriteLine("MoveEnd " + lastUnit.X + " " + lastUnit.Y + " " + lastUnit.MovesLeft);
         }
-        public void moveToHex(Unit lastUnit, Dictionary<(int, int), Unit> unitMap, HexDTO hex)
+        public void moveToHex(Unit lastUnit, Dictionary<(int, int), Unit> unitMap, Hex hex)
         {
             moveToHex(lastUnit, unitMap, hex.X, hex.Y, hex.Moves);
         }
@@ -40,8 +40,8 @@ namespace backend.Services
         {
             int[,] movesToReachMas = new int[MAPSIZE,MAPSIZE]; 
             Unit closestEnemy = PathFinder.findClosestEnemy(myUnit, unitMap,movesToReachMas);
-            List<HexDTO> path = PathFinder.findPathToClosestEnemy(myUnit, unitMap,closestEnemy,movesToReachMas);
-            foreach (HexDTO hex in path)
+            List<Hex> path = PathFinder.findPathToClosestEnemy(myUnit, unitMap,closestEnemy,movesToReachMas);
+            foreach (Hex hex in path)
             {
                 if(hex.Moves==myUnit.MovesLeft)
                 {

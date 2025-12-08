@@ -1,11 +1,13 @@
-﻿namespace backend.DTOes
+﻿using backend.Entities;
+
+namespace backend.DTOes
 {
     public class MovesDTO
     {
-        public List<HexDTO> hexes { get; }
+        public List<Hex> hexes { get; }
         public List<EnemiesHex> enemiesHexes { get; }
 
-        public MovesDTO(List<HexDTO> hexes, List<EnemiesHex> enemiesHexes)
+        public MovesDTO(List<Hex> hexes, List<EnemiesHex> enemiesHexes)
         {
             this.hexes = hexes;
             this.enemiesHexes = enemiesHexes;

@@ -36,7 +36,7 @@ namespace backend.Services
         {
             MoveEngine moveEngine = new MoveEngine();
             MovesDTO moves=moveEngine.getAllMoves(_unitMap,myUnit,myUnit.Side);
-            HexDTO hexToStepOn;
+            Hex hexToStepOn;
             Unit pickedUnit;
             (pickedUnit,hexToStepOn)=findTheBestOpponent(moves.enemiesHexes);
             if(pickedUnit!=null&&hexToStepOn!=null)
@@ -51,11 +51,11 @@ namespace backend.Services
                     moveRandomly(moves,myUnit);
             }
         }
-        public (Unit?,HexDTO?) findTheBestOpponent(List<EnemiesHex> enemiesHexes)
+        public (Unit?,Hex?) findTheBestOpponent(List<EnemiesHex> enemiesHexes)
         {
             int minHp = int.MaxValue;
             Unit pickedUnit=null;
-            HexDTO hexToStayOn = null;
+            Hex hexToStayOn = null;
             foreach(EnemiesHex hex in enemiesHexes)
             {
                 if (_unitMap[(hex.X,hex.Y)].Health<minHp)
@@ -116,8 +116,8 @@ namespace backend.Services
         public void moveRandomly(MovesDTO moves,Unit myUnit)
         {
             MoveEngine pathFinder = new MoveEngine();
-            List<HexDTO> hexes=new();
-            foreach(HexDTO hex in moves.hexes)
+            List<Hex> hexes=new();
+            foreach(Hex hex in moves.hexes)
             {
                 if (myUnit.MovesLeft == hex.Moves)
                     hexes.Add(hex);

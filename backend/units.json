@@ -1,6 +1,6 @@
 
 {
-  "Leaders": [
+  "LeaderTemplates": [
     {
       "$type": "unit",
       "Health": 50,
@@ -31,7 +31,7 @@
       }
     }
   ],
-  "OtherUnits": [
+  "OtherUnitsTemplates": [
     {
     "$type": "unit",
     "Health": 60,

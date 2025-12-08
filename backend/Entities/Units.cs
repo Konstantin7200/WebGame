@@ -2,15 +2,15 @@
 
 namespace backend.Entities
 {
-    public class Units
+    public class UnitTemplates
     {
-        public List<UnitTemplate> Leaders { get; set; }
-        public List<UnitTemplate> OtherUnits { get; set; }
+        public List<UnitTemplate> LeaderTemplates { get; set; }
+        public List<UnitTemplate> OtherUnitsTemplates { get; set; }
 
-        public Units(List<UnitTemplate> otherUnits,List<UnitTemplate> leaders)
+        public UnitTemplates(List<UnitTemplate> otherUnitsTemplates,List<UnitTemplate> leaderTemplates)
         {
-            OtherUnits = otherUnits;
-            Leaders = leaders;
+            OtherUnitsTemplates = otherUnitsTemplates;
+            LeaderTemplates = leaderTemplates;
         }
     }
 }

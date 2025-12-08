@@ -1,12 +1,12 @@
-﻿namespace backend.DTOes
+﻿namespace backend.Entities
 {
     public class EnemiesHex
     {
-        public HexDTO Previous { get; }
+        public Hex Previous { get; }
         public int X { get; }
         public int Y { get; }
 
-        public EnemiesHex(int x,int y,HexDTO previous)
+        public EnemiesHex(int x,int y,Hex previous)
         {
             X = x;
             Y = y;

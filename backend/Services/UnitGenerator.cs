@@ -14,18 +14,18 @@ namespace backend.Services
         {
             unitMap = UnitMap;
         }
-        public void generateOneSide(Units units,int column)
+        public void generateOneSide(UnitTemplates units,int column)
         {
             UnitSide unitSide = column == 1 ? UnitSide.Yours : UnitSide.Enemies;
             int leadersY = column == 1 ? 0 : column + 1;
             (int X, int Y) unitHex = (leadersY, 3);
-            UnitTemplate pickedUnitTemplate = units.Leaders[Random.Shared.Next(0, units.Leaders.Count)];
+            UnitTemplate pickedUnitTemplate = units.LeaderTemplates[Random.Shared.Next(0, units.LeaderTemplates.Count)];
             Leader leader = new Leader(new UnitTemplate(pickedUnitTemplate), unitHex.X, unitHex.Y, unitSide);
             unitMap.Add((unitHex.X, unitHex.Y), leader);
             for (int i = 0; i < UNITS_NUMBER; i++)
             {
                 unitHex = (column, i+2);
-                pickedUnitTemplate = units.OtherUnits[Random.Shared.Next(0, units.OtherUnits.Count)];
+                pickedUnitTemplate = units.OtherUnitsTemplates[Random.Shared.Next(0, units.OtherUnitsTemplates.Count)];
                 Unit unit = new Unit(unit: new UnitTemplate(pickedUnitTemplate), x: unitHex.X, y: unitHex.Y, unitSide);
                 unitMap.Add((unitHex.X, unitHex.Y), unit);
             }
@@ -35,7 +35,7 @@ namespace backend.Services
             unitMap.Clear();
             var random = new Random();
             
-            Units units=MyJsonSerializer.readFromJson<Units>(MyJsonSerializer.UNITS_PATH);
+            UnitTemplates units=MyJsonSerializer.readFromJson<UnitTemplates>(MyJsonSerializer.UNITS_PATH);
 
             generateOneSide(units, 1);
             generateOneSide(units, 5);

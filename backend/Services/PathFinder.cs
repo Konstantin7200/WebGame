@@ -1,5 +1,4 @@
-﻿using backend.DTOes;
-using backend.Entities;
+﻿using backend.Entities;
 
 namespace backend.Services
 {
@@ -14,12 +13,12 @@ namespace backend.Services
                 return movesEven;
             return movesOdd;
         }
-        static public List<EnemiesHex> findEnemiesHexes(List<HexDTO> hexes, Unit pickedUnit, int[,] hexMas)
+        static public List<EnemiesHex> findEnemiesHexes(List<Hex> hexes, Unit pickedUnit, int[,] hexMas)
         {
             Dictionary<(int, int), EnemiesHex> enemiesHexes = new Dictionary<(int, int), EnemiesHex>();
-            hexes.Insert(0, new HexDTO(pickedUnit.X, pickedUnit.Y, 0));
+            hexes.Insert(0, new Hex(pickedUnit.X, pickedUnit.Y, 0));
 
-            foreach (HexDTO hex in hexes)
+            foreach (Hex hex in hexes)
             {
                 int[,] moves = getNeighbourHexes(hex.Y);
                 for (int i = 0; i < moves.GetLength(0); i++)
@@ -53,7 +52,7 @@ namespace backend.Services
                 }
             }
         }
-        static public List<HexDTO> findFreeHexes(Dictionary<(int, int), Unit> unitMap, Unit pickedUnit, int[,] hexMas)
+        static public List<Hex> findFreeHexes(Dictionary<(int, int), Unit> unitMap, Unit pickedUnit, int[,] hexMas)
         {
             (int X, int Y) hex = new();
             markControlZones(unitMap,pickedUnit, hexMas);
@@ -93,24 +92,24 @@ namespace backend.Services
                     hexMas[unit.X, unit.Y] = -2;
                 }
             }
-            List<HexDTO> result = new();
+            List<Hex> result = new();
 
             for (int i = 0; i < MAPSIZE; i++)
                 for (int j = 0; j < MAPSIZE; j++)
                 {
                     if (movesToReachMas[i, j] != 0)
                     {
-                        result.Add(new HexDTO(i, j, movesToReachMas[i, j]));
+                        result.Add(new Hex(i, j, movesToReachMas[i, j]));
                     }
                 }
             return result;
         }
-        static public List<HexDTO> findPathToClosestEnemy(Unit myUnit, Dictionary<(int, int), Unit> unitMap, Unit closestEnemy, int[,] movesToReachMas)
+        static public List<Hex> findPathToClosestEnemy(Unit myUnit, Dictionary<(int, int), Unit> unitMap, Unit closestEnemy, int[,] movesToReachMas)
         {
             (int X, int Y) hex = new();
             Queue<(int, int)> queue = new();
             queue.Enqueue((closestEnemy.X, closestEnemy.Y));
-            List<HexDTO> path = new();
+            List<Hex> path = new();
             movesToReachMas[myUnit.X, myUnit.Y] = 0;
             while (queue.Count != 0)
             {
@@ -126,7 +125,7 @@ namespace backend.Services
                     {
                         if (movesToReachMas[hex.X, hex.Y] - 1 == movesToReachMas[hex.X + moves[i, 0], hex.Y + moves[i, 1]])
                         {
-                            path.Add(new HexDTO(hex.X + moves[i, 0], hex.Y + moves[i, 1], movesToReachMas[hex.X + moves[i, 0], hex.Y + moves[i, 1]]));
+                            path.Add(new Hex(hex.X + moves[i, 0], hex.Y + moves[i, 1], movesToReachMas[hex.X + moves[i, 0], hex.Y + moves[i, 1]]));
                             queue.Enqueue((hex.X + moves[i, 0], hex.Y + moves[i, 1]));
                             break;
                         }
