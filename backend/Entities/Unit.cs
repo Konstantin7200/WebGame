@@ -36,7 +36,7 @@ namespace backend.Entities
         {
 
         }
-        public void resetMoves()
+        public virtual void OnTurnStart()
         {
             MovesLeft = BaseUnit.MovesAmount;
             attacked = false;
@@ -44,6 +44,10 @@ namespace backend.Entities
         public void takeDamage(double damage)
         {
             Health -=(int)damage;
+        }
+        public void getHealed(int healingAmount)
+        {
+            Health = Math.Min(Health + healingAmount, BaseUnit.Health);
         }
         public bool isDead()
         {

@@ -9,7 +9,7 @@ namespace backend.Services
     public class UnitGenerator
     {
         Dictionary<(int, int), Unit> unitMap;
-        const int UNITS_NUMBER = 3;
+        const int UNITS_NUMBER = 5;
         public UnitGenerator(Dictionary<(int, int),Unit> UnitMap)
         {
             unitMap = UnitMap;
@@ -24,9 +24,13 @@ namespace backend.Services
             unitMap.Add((unitHex.X, unitHex.Y), leader);
             for (int i = 0; i < UNITS_NUMBER; i++)
             {
-                unitHex = (column, i+2);
+                unitHex = (column, i+1);
                 pickedUnitTemplate = units.OtherUnitsTemplates[Random.Shared.Next(0, units.OtherUnitsTemplates.Count)];
-                Unit unit = new Unit(unit: new UnitTemplate(pickedUnitTemplate), x: unitHex.X, y: unitHex.Y, unitSide);
+                Unit unit= new Unit(unit: new UnitTemplate(pickedUnitTemplate), x: unitHex.X, y: unitHex.Y, unitSide); ;
+                if (pickedUnitTemplate.GetType() == typeof(HealerTemplate))
+                {
+                    unit = new Healer(unit: new HealerTemplate((HealerTemplate)pickedUnitTemplate), x: unitHex.X, y: unitHex.Y, unitSide,unitMap);
+                }
                 unitMap.Add((unitHex.X, unitHex.Y), unit);
             }
         }

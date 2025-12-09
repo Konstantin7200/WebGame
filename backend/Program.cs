@@ -6,7 +6,8 @@ using backend.Templates;
 using static backend.Templates.UnitTemplate;
 
 
-/*var unit = new UnitTemplate(
+/*var unit = new HealerTemplate(
+    healingPower:15,
     health: 100,
     attacks: new List<Attack>
     {
@@ -30,10 +31,10 @@ using static backend.Templates.UnitTemplate;
 );
 List<UnitTemplate> otherUnits = new List<UnitTemplate> { unit};
 List<UnitTemplate> leaders = new List<UnitTemplate>();
-Units units = new(otherUnits, leaders);
+UnitTemplates units = new(otherUnits, leaders);
 File.Delete("units.json");
-MyJsonSerializer.writeToJson(units, "units.json");
-*/
+MyJsonSerializer.writeToJson(units, "units.json");*/
+
 
 var builder = WebApplication.CreateBuilder(args);
 

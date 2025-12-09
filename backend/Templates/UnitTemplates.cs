@@ -1,6 +1,4 @@
-﻿using backend.Templates;
-
-namespace backend.Entities
+﻿namespace backend.Templates
 {
     public class UnitTemplates
     {

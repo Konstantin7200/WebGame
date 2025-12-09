@@ -8,7 +8,6 @@ namespace backend.Services
     {
         public static void fight(Unit attacker, Unit defender, Attack attackersAttack, Attack defendersAttack, Dictionary<(int, int), Unit> unitMap)
         {
-            Console.WriteLine("Fight "+attacker.X +" "+ attacker.Y +" "+ attacker.MovesLeft);
             attacker.attacked = true;
             int aAttacksLeft = attackersAttack.AttacksAmount;
             int dAttacksLeft = defendersAttack.AttacksAmount;

@@ -32,7 +32,7 @@ namespace backend.Controllers
         [HttpGet("isNextPlayerAI")]
         public bool isNextPlayerAI()
         {
-            return _playerConfig.isAI(Unit.UnitSide.Yours == _gameState.CurrentTurn.currentTurn);
+            return _playerConfig.isAI(Unit.UnitSide.Yours == _gameState.CurrentTurn);
         }
         [HttpPost("StartGame")]
         public void startGame([FromBody] PlayerTypes playerTypes,PlayerConfig playerConfig)

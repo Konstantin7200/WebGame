@@ -4,6 +4,7 @@ using System.Text.Json.Serialization;
 namespace backend.Templates
 {
     [JsonDerivedType(typeof(UnitTemplate), "unit")]
+    [JsonDerivedType(typeof(HealerTemplate), "healer")]
     public class UnitTemplate
     {
         public int Health { get;  set; }

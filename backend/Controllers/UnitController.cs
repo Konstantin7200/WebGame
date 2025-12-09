@@ -44,7 +44,7 @@ namespace backend.Controllers
                 return new MovesDTO();
             MoveEngine moveEngine = new MoveEngine();
             _gameState.LastUnit = _gameState.UnitMap[(x, y)];
-            return moveEngine.getAllMoves(_gameState.UnitMap, _gameState.UnitMap[(x, y)],_gameState.CurrentTurn.currentTurn);
+            return moveEngine.getAllMoves(_gameState.UnitMap, _gameState.UnitMap[(x, y)],_gameState.CurrentTurn);
         }
 
         [HttpPatch("MoveUnitTo")]

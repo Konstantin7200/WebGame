@@ -22,15 +22,11 @@ namespace backend.Services
         }
         public void moveToHex(Unit lastUnit, Dictionary<(int, int), Unit> UnitMap, int x, int y, int movesToReach)
         {
-            Console.WriteLine("MoveStart " + lastUnit.X + " " + lastUnit.Y + " " + lastUnit.MovesLeft);
             lastUnit.MovesLeft -= movesToReach;
             UnitMap.Remove((lastUnit.X, lastUnit.Y));
             lastUnit.X = x;
             lastUnit.Y = y;
-            /*Unit movedUnit = lastUnit.createNew();
-            movedUnit.copyFrom(lastUnit);*/
             UnitMap.Add((x, y), lastUnit);
-            Console.WriteLine("MoveEnd " + lastUnit.X + " " + lastUnit.Y + " " + lastUnit.MovesLeft);
         }
         public void moveToHex(Unit lastUnit, Dictionary<(int, int), Unit> unitMap, Hex hex)
         {

@@ -11,7 +11,7 @@ namespace backend.Services
             _unitMap = unitMap;
         }
 
-        public bool start(Turn currentTurn)
+        public bool start(Unit.UnitSide currentTurn)
         {
             /*foreach(var unit in _unitMap.Values)
             {
@@ -23,7 +23,7 @@ namespace backend.Services
             Console.WriteLine("______________________________________");*/
             foreach(var unit in _unitMap.Values)
             {
-                if (unit.Side == currentTurn.currentTurn && unit.MovesLeft != 0&&!unit.attacked)
+                if (unit.Side == currentTurn && unit.MovesLeft != 0&&!unit.attacked)
                 {
                     makeAMove(unit);
                     return true;
