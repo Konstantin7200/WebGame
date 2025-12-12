@@ -24,7 +24,7 @@ namespace backend.Services
             unitMap.Add((unitHex.X, unitHex.Y), leader);
             for (int i = 0; i < UNITS_NUMBER; i++)
             {
-                unitHex = (column, i+1);
+                unitHex = (column, i+(7-UNITS_NUMBER)/2);
                 pickedUnitTemplate = units.OtherUnitsTemplates[Random.Shared.Next(0, units.OtherUnitsTemplates.Count)];
                 Unit unit= new Unit(unit: new UnitTemplate(pickedUnitTemplate), x: unitHex.X, y: unitHex.Y, unitSide); ;
                 if (pickedUnitTemplate.GetType() == typeof(HealerTemplate))
@@ -37,7 +37,6 @@ namespace backend.Services
         public void initialGeneration()
         {
             unitMap.Clear();
-            var random = new Random();
             
             UnitTemplates units=MyJsonSerializer.readFromJson<UnitTemplates>(MyJsonSerializer.UNITS_PATH);
 

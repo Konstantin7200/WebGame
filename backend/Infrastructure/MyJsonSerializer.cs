@@ -6,6 +6,7 @@ namespace backend.Infrastructure
     public class MyJsonSerializer
     {
         public const string UNITS_PATH = "units.json";
+        public const string GAMES_PATH = "games.json";
         static public void writeToJson<T>(T obj,string path)
         {
             string str=JsonSerializer.Serialize(obj);

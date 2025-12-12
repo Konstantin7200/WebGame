@@ -1,6 +1,7 @@
 ﻿using backend.DTOes;
 using backend.Entities;
 using backend.GameConfig;
+using backend.Infrastructure;
 using backend.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -27,17 +28,33 @@ namespace backend.Controllers
         public bool makeAITurn()
         {
             AI ai = new AI(_gameState.UnitMap);
-            return ai.start(_gameState.CurrentTurn);
+            return ai.start(_gameState.CurrentSide);
         }
         [HttpGet("isNextPlayerAI")]
         public bool isNextPlayerAI()
         {
-            return _playerConfig.isAI(Unit.UnitSide.Yours == _gameState.CurrentTurn);
+            return _playerConfig.isAI(Unit.UnitSide.Yours == _gameState.CurrentSide);
         }
         [HttpPost("StartGame")]
         public void startGame([FromBody] PlayerTypes playerTypes,PlayerConfig playerConfig)
         {
             _gameState.startNewGame(playerTypes,playerConfig);
+        }
+        [HttpGet("LoadGame")]
+        public GameDTO loadGame([FromQuery] int index)
+        {
+            _gameState = GameRepository.loadGame(index);
+            return new GameDTO(_gameState);
+        }
+        [HttpPost("SaveGame")]
+        public void saveGame()
+        {
+            GameRepository.saveGame(_gameState);
+        }
+        [HttpGet("GetGames")]
+        public List<GameDTO> getGames()
+        {
+            return GameDTO.getGames(GameRepository.Games);
         }
     }
 }

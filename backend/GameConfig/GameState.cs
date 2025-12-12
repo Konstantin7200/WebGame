@@ -10,23 +10,26 @@ namespace backend.GameConfig
     {
         public Dictionary<(int, int), Unit> UnitMap { get; }
         public Unit LastUnit { get; set; }
-        public Unit.UnitSide CurrentTurn { get; private set; }
-        public GameState(Dictionary<(int,int),Unit> unitMap, Unit lastUnit, Unit.UnitSide currentTurn)
+        public int TurnNumber{get;private set;}
+        public Unit.UnitSide CurrentSide { get; private set; }
+        public GameState(Dictionary<(int,int),Unit> unitMap, Unit lastUnit, Unit.UnitSide currentSide,int turnNumber)
         {
             UnitMap = unitMap;
             LastUnit = lastUnit;
-            CurrentTurn = currentTurn;
+            CurrentSide = currentSide;
+            TurnNumber = turnNumber;
         }
         public void endTurn()
         {
-            CurrentTurn=CurrentTurn == Unit.UnitSide.Yours ? Unit.UnitSide.Enemies : Unit.UnitSide.Yours;
+            CurrentSide=CurrentSide == Unit.UnitSide.Yours ? Unit.UnitSide.Enemies : Unit.UnitSide.Yours;
             startNewTurn();
+            TurnNumber++;
         }
         public void startNewTurn()
         {
             foreach (var unit in UnitMap.Values)
             {
-                if (unit.Side == CurrentTurn)
+                if (unit.Side == CurrentSide)
                 {
                     unit.OnTurnStart();
                 }
@@ -35,7 +38,7 @@ namespace backend.GameConfig
         public void startNewGame(PlayerTypes playerTypes,PlayerConfig _playerConfig)
         {
             _playerConfig.createNewGame(playerTypes.PlayerType1, playerTypes.PlayerType2);
-            CurrentTurn = Unit.UnitSide.Enemies;
+            CurrentSide = Unit.UnitSide.Enemies;
             UnitGenerator unitGenerator = new(UnitMap);
             unitGenerator.initialGeneration();
         }

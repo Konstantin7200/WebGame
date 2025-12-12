@@ -48,13 +48,15 @@ builder.Services.AddCors(options =>
     });
 });
 PlayerConfig playerConfig = new();
-GameState gameState = new(new(), new(), new());
+GameState gameState = new(new(), new(), new(),0);
+GameRepository.loadGames();
 builder.Services.AddSingleton(gameState);
 builder.Services.AddSingleton(playerConfig);
 builder.Services.AddControllers();
 var app=builder.Build();
 app.UseCors("AllowAll");
 app.MapControllers();
+
 
 
 
