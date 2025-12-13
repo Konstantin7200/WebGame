@@ -8,7 +8,7 @@ namespace backend.Services
     {
         public static void fight(Unit attacker, Unit defender, Attack attackersAttack, Attack defendersAttack, Dictionary<(int, int), Unit> unitMap)
         {
-            attacker.attacked = true;
+            attacker.Attacked = true;
             int aAttacksLeft = attackersAttack.AttacksAmount;
             int dAttacksLeft = defendersAttack.AttacksAmount;
             int result = 0;

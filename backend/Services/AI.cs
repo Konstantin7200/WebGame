@@ -23,7 +23,7 @@ namespace backend.Services
             Console.WriteLine("______________________________________");*/
             foreach(var unit in _unitMap.Values)
             {
-                if (unit.Side == currentTurn && unit.MovesLeft != 0&&!unit.attacked)
+                if (unit.Side == currentTurn && unit.MovesLeft != 0&&!unit.Attacked)
                 {
                     makeAMove(unit);
                     return true;

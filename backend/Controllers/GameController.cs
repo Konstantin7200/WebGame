@@ -43,18 +43,24 @@ namespace backend.Controllers
         [HttpGet("LoadGame")]
         public GameDTO loadGame([FromQuery] int index)
         {
-            _gameState = GameRepository.loadGame(index);
-            return new GameDTO(_gameState);
+            _gameState.copy(GameRepository.loadGame(index).Item1);
+            _playerConfig.copy(GameRepository.loadGame(index).Item2);
+            return GameRepository.getGame(index);
         }
         [HttpPost("SaveGame")]
         public void saveGame()
         {
-            GameRepository.saveGame(_gameState);
+            GameRepository.saveGame(_gameState,_playerConfig);
         }
         [HttpGet("GetGames")]
         public List<GameDTO> getGames()
         {
-            return GameDTO.getGames(GameRepository.Games);
+            return GameRepository.Games; 
+        }
+        [HttpGet("GetTurn")]
+        public int getTurn()
+        {
+            return _gameState.TurnNumber;
         }
     }
 }

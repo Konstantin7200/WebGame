@@ -1,5 +1,6 @@
 ﻿using backend.Entities;
 using backend.Services;
+using System.Text.Json.Serialization;
 
 namespace backend.GameConfig
 {
@@ -16,6 +17,27 @@ namespace backend.GameConfig
         {
             FirstSide = side1 ? PlayerType.Player : PlayerType.AI;
             SecondSide = side2 ? PlayerType.Player: PlayerType.AI;
+        }
+        [JsonConstructor]
+        public PlayerConfig(PlayerType firstSide, PlayerType secondSide)
+        {
+            FirstSide = firstSide;
+            SecondSide = secondSide;
+        }
+        public void copy(PlayerConfig other)
+        {
+            FirstSide = other.FirstSide;
+            SecondSide = other.SecondSide;
+        }
+
+        public PlayerConfig(PlayerConfig other)
+        {
+            FirstSide = other.FirstSide;
+            SecondSide = other.SecondSide;
+        }
+        public PlayerConfig()
+        {
+
         }
         public bool isAI(bool turn)
         {

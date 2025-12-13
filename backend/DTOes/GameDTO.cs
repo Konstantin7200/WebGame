@@ -1,27 +1,29 @@
 ﻿using backend.Entities;
 using backend.GameConfig;
+using System.Text.Json.Serialization;
 
 namespace backend.DTOes
 {
     public class GameDTO
     {
-        public List<Unit> units { get; private set; }
-        public int currentTurn { get; private set; }
-        public GameDTO(GameState gameState)
+        public List<Unit> Units { get; private set; }
+        public int CurrentTurn { get; private set; }
+        public PlayerConfig PlayerConfig { get;private set; }
+        public DateTime DateOfCreation { get; private set; }
+        public GameDTO(GameState gameState, PlayerConfig playerConfig, DateTime dateOfCreation)
         {
-            units = gameState.UnitMap.Values.ToList();
-            currentTurn = gameState.TurnNumber;
+            Units = gameState.UnitMap.Values.ToList();
+            CurrentTurn = gameState.TurnNumber;
+            PlayerConfig = playerConfig;
+            DateOfCreation = dateOfCreation;
         }
-        static public List<GameDTO> getGames(List<GameState> gameStates)
+        [JsonConstructor]
+        public GameDTO(List<Unit> units,int currentTurn,PlayerConfig playerConfig,DateTime dateOfCreation)
         {
-            List <GameDTO> result= new();
-
-            for(int i=0;i<gameStates.Count;i++)
-            {
-                result.Add(new GameDTO(gameStates[i]));
-            }
-
-            return result;
+            DateOfCreation = dateOfCreation;
+            Units = units;
+            CurrentTurn = currentTurn;
+            PlayerConfig = playerConfig;
         }
     }
 }

@@ -11,7 +11,7 @@ namespace backend.Services
 
         public MovesDTO getAllMoves(Dictionary<(int, int), Unit> UnitMap, Unit pickedUnit,Unit.UnitSide turn)
         {
-            if (turn != pickedUnit.Side || pickedUnit.attacked)
+            if (turn != pickedUnit.Side || pickedUnit.Attacked)
             {
                 return new MovesDTO(new List<Hex>(), new List<EnemiesHex>());
             }

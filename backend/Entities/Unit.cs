@@ -1,5 +1,6 @@
 ﻿using backend.Templates;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json.Serialization;
 
 namespace backend.Entities
 {
@@ -16,22 +17,34 @@ namespace backend.Entities
         public int Y { get; set; }
         public int MovesLeft { get; set; }
         public string Name { get; protected set; }
-        public bool attacked;
+        public bool Attacked { get; set; }
         public int Health { get; protected set; }
 
         string[] names = new[] { "Valera","Maksim","SanFran" };
-
+        [JsonConstructor]
+        public Unit(UnitTemplate baseUnit, int x, int y, UnitSide side, int health, int movesLeft,bool attacked,string name)
+        {
+            BaseUnit = baseUnit;
+            X = x;
+            Y = y;
+            Side = side;
+            Health = health;
+            MovesLeft = movesLeft;
+            Attacked = attacked;
+            Name = name;
+        }
         public Unit(UnitTemplate unit,int x,int y,UnitSide side)
         {
             Side = side;
-            Name = names[Random.Shared.Next(0, names.Length - 1)];
+            Name = names[Random.Shared.Next(0, names.Length)];
             BaseUnit = unit;
             X = x;
             Y = y;
             MovesLeft = BaseUnit.MovesAmount;
-            attacked = false;
+            Attacked = false;
             Health = BaseUnit.Health;
         }
+        
         public Unit()
         {
 
@@ -39,7 +52,7 @@ namespace backend.Entities
         public virtual void OnTurnStart()
         {
             MovesLeft = BaseUnit.MovesAmount;
-            attacked = false;
+            Attacked = false;
         }
         public void takeDamage(double damage)
         {

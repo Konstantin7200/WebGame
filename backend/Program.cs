@@ -49,7 +49,7 @@ builder.Services.AddCors(options =>
 });
 PlayerConfig playerConfig = new();
 GameState gameState = new(new(), new(), new(),0);
-GameRepository.loadGames();
+GameRepository.loadGamesFromFile();
 builder.Services.AddSingleton(gameState);
 builder.Services.AddSingleton(playerConfig);
 builder.Services.AddControllers();

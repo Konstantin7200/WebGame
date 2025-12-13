@@ -8,7 +8,7 @@ namespace backend.GameConfig
 {
     public class GameState
     {
-        public Dictionary<(int, int), Unit> UnitMap { get; }
+        public Dictionary<(int, int), Unit> UnitMap { get; private set; }
         public Unit LastUnit { get; set; }
         public int TurnNumber{get;private set;}
         public Unit.UnitSide CurrentSide { get; private set; }
@@ -18,6 +18,24 @@ namespace backend.GameConfig
             LastUnit = lastUnit;
             CurrentSide = currentSide;
             TurnNumber = turnNumber;
+        }
+        public GameState(List<Unit> units,int turnNumber)
+        {
+            CurrentSide = turnNumber % 2 == 0 ? Unit.UnitSide.Yours : Unit.UnitSide.Enemies;
+            Dictionary<(int, int), Unit> unitMap = new();
+            foreach(Unit unit in units)
+            {
+                unitMap.Add((unit.X, unit.Y), unit);
+            }
+            UnitMap = unitMap;
+            LastUnit = new();
+        }
+        public void copy(GameState other)
+        {
+            UnitMap = other.UnitMap;
+            LastUnit = other.LastUnit;
+            TurnNumber = other.TurnNumber;
+            CurrentSide = other.CurrentSide;
         }
         public void endTurn()
         {
@@ -39,6 +57,7 @@ namespace backend.GameConfig
         {
             _playerConfig.createNewGame(playerTypes.PlayerType1, playerTypes.PlayerType2);
             CurrentSide = Unit.UnitSide.Enemies;
+            TurnNumber = 0;
             UnitGenerator unitGenerator = new(UnitMap);
             unitGenerator.initialGeneration();
         }

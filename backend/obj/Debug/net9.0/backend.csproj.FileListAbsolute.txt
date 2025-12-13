@@ -34,3 +34,4 @@ D:\DEV\CourseWork\backend\obj\Debug\net9.0\ref\backend.dll
 D:\DEV\CourseWork\backend\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\DEV\CourseWork\backend\obj\Debug\net9.0\backend.sourcelink.json
 D:\DEV\CourseWork\backend\bin\Debug\net9.0\units.json
+D:\DEV\CourseWork\backend\bin\Debug\net9.0\games.json
