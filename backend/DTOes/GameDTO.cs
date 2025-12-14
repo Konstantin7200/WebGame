@@ -14,7 +14,8 @@ namespace backend.DTOes
         {
             Units = gameState.UnitMap.Values.ToList();
             CurrentTurn = gameState.TurnNumber;
-            PlayerConfig = playerConfig;
+            PlayerConfig = new PlayerConfig();
+            PlayerConfig.copy(playerConfig);
             DateOfCreation = dateOfCreation;
         }
         [JsonConstructor]

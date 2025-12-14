@@ -7,8 +7,8 @@ namespace backend.Infrastructure
     {
         public static List<GameDTO> Games{ get;private set; }
         static public void saveGame(GameState gameState,PlayerConfig playerConfig){
+            loadGamesFromFile();
             Games.Add(new GameDTO(gameState, playerConfig,DateTime.Now));
-            Console.WriteLine(Games.Count);
             MyJsonSerializer.rewriteFile(Games, MyJsonSerializer.GAMES_PATH);
         }
         static public void loadGamesFromFile()

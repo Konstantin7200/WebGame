@@ -21,11 +21,12 @@ namespace backend.GameConfig
         }
         public GameState(List<Unit> units,int turnNumber)
         {
-            CurrentSide = turnNumber % 2 == 0 ? Unit.UnitSide.Yours : Unit.UnitSide.Enemies;
+            CurrentSide = turnNumber % 2 == 0 ? Unit.UnitSide.Enemies : Unit.UnitSide.Yours;
+            TurnNumber = turnNumber;
             Dictionary<(int, int), Unit> unitMap = new();
             foreach(Unit unit in units)
             {
-                unitMap.Add((unit.X, unit.Y), unit);
+                unitMap.Add((unit.X, unit.Y),unit);
             }
             UnitMap = unitMap;
             LastUnit = new();

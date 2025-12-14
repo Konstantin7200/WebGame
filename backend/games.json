@@ -33,169 +33,42 @@
         },
         "Side": 0,
         "X": 0,
-        "Y": 2,
+        "Y": 3,
+        "MovesLeft": 1,
+        "Name": "Maksim",
+        "Attacked": false,
+        "Health": 50
+      },
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 60,
+          "Attacks": [
+            {
+              "Damage": 20,
+              "AttacksAmount": 2,
+              "AttackName": "Sword slash",
+              "DamageType": 3,
+              "AttackType": 1
+            }
+          ],
+          "Type": "SwordAngel",
+          "MovesAmount": 3,
+          "Resistances": {
+            "Arcane": 0.5,
+            "Fire": 0,
+            "Smash": 0,
+            "Slash": 0,
+            "Pierce": -0.3
+          }
+        },
+        "Side": 0,
+        "X": 4,
+        "Y": 3,
         "MovesLeft": 0,
         "Name": "Valera",
         "Attacked": false,
-        "Health": 50
-      },
-      {
-        "BaseUnit": {
-          "$type": "healer",
-          "HealingPower": 15,
-          "Health": 50,
-          "Attacks": [
-            {
-              "Damage": 10,
-              "AttacksAmount": 2,
-              "AttackName": "Holy magic",
-              "DamageType": 0,
-              "AttackType": 0
-            }
-          ],
-          "Type": "Acolyte",
-          "MovesAmount": 2,
-          "Resistances": {
-            "Arcane": 0,
-            "Fire": 0,
-            "Smash": 0,
-            "Slash": 0,
-            "Pierce": 0
-          }
-        },
-        "Side": 0,
-        "X": 1,
-        "Y": 1,
-        "MovesLeft": 2,
-        "Name": "SanFran",
-        "Attacked": false,
-        "Health": 50
-      },
-      {
-        "BaseUnit": {
-          "$type": "unit",
-          "Health": 80,
-          "Attacks": [
-            {
-              "Damage": 15,
-              "AttacksAmount": 2,
-              "AttackName": "Axe slash",
-              "DamageType": 3,
-              "AttackType": 1
-            }
-          ],
-          "Type": "Axer",
-          "MovesAmount": 2,
-          "Resistances": {
-            "Arcane": 0,
-            "Fire": 0,
-            "Smash": 0,
-            "Slash": 0.2,
-            "Pierce": 0.1
-          }
-        },
-        "Side": 0,
-        "X": 3,
-        "Y": 3,
-        "MovesLeft": 0,
-        "Name": "Maksim",
-        "Attacked": false,
-        "Health": 80
-      },
-      {
-        "BaseUnit": {
-          "$type": "healer",
-          "HealingPower": 15,
-          "Health": 50,
-          "Attacks": [
-            {
-              "Damage": 10,
-              "AttacksAmount": 2,
-              "AttackName": "Holy magic",
-              "DamageType": 0,
-              "AttackType": 0
-            }
-          ],
-          "Type": "Acolyte",
-          "MovesAmount": 2,
-          "Resistances": {
-            "Arcane": 0,
-            "Fire": 0,
-            "Smash": 0,
-            "Slash": 0,
-            "Pierce": 0
-          }
-        },
-        "Side": 0,
-        "X": 2,
-        "Y": 3,
-        "MovesLeft": 1,
-        "Name": "SanFran",
-        "Attacked": false,
-        "Health": 50
-      },
-      {
-        "BaseUnit": {
-          "$type": "unit",
-          "Health": 80,
-          "Attacks": [
-            {
-              "Damage": 15,
-              "AttacksAmount": 2,
-              "AttackName": "Axe slash",
-              "DamageType": 3,
-              "AttackType": 1
-            }
-          ],
-          "Type": "Axer",
-          "MovesAmount": 2,
-          "Resistances": {
-            "Arcane": 0,
-            "Fire": 0,
-            "Smash": 0,
-            "Slash": 0.2,
-            "Pierce": 0.1
-          }
-        },
-        "Side": 0,
-        "X": 2,
-        "Y": 4,
-        "MovesLeft": 1,
-        "Name": "SanFran",
-        "Attacked": false,
-        "Health": 80
-      },
-      {
-        "BaseUnit": {
-          "$type": "healer",
-          "HealingPower": 15,
-          "Health": 50,
-          "Attacks": [
-            {
-              "Damage": 10,
-              "AttacksAmount": 2,
-              "AttackName": "Holy magic",
-              "DamageType": 0,
-              "AttackType": 0
-            }
-          ],
-          "Type": "Acolyte",
-          "MovesAmount": 2,
-          "Resistances": {
-            "Arcane": 0,
-            "Fire": 0,
-            "Smash": 0,
-            "Slash": 0,
-            "Pierce": 0
-          }
-        },
-        "Side": 0,
-        "X": 1,
-        "Y": 3,
-        "MovesLeft": 0,
-        "Name": "SanFran",
-        "Attacked": false,
-        "Health": 50
+        "Health": 60
       },
       {
         "BaseUnit": {
@@ -231,101 +104,6 @@
         "X": 6,
         "Y": 3,
         "MovesLeft": 1,
-        "Name": "Valera",
-        "Attacked": false,
-        "Health": 50
-      },
-      {
-        "BaseUnit": {
-          "$type": "unit",
-          "Health": 90,
-          "Attacks": [
-            {
-              "Damage": 30,
-              "AttacksAmount": 1,
-              "AttackName": "Hammer smash",
-              "DamageType": 4,
-              "AttackType": 1
-            }
-          ],
-          "Type": "Paladin",
-          "MovesAmount": 1,
-          "Resistances": {
-            "Arcane": 0,
-            "Fire": -0.5,
-            "Smash": 0.2,
-            "Slash": 0.3,
-            "Pierce": 0.4
-          }
-        },
-        "Side": 1,
-        "X": 5,
-        "Y": 1,
-        "MovesLeft": 1,
-        "Name": "SanFran",
-        "Attacked": false,
-        "Health": 90
-      },
-      {
-        "BaseUnit": {
-          "$type": "healer",
-          "HealingPower": 15,
-          "Health": 50,
-          "Attacks": [
-            {
-              "Damage": 10,
-              "AttacksAmount": 2,
-              "AttackName": "Holy magic",
-              "DamageType": 0,
-              "AttackType": 0
-            }
-          ],
-          "Type": "Acolyte",
-          "MovesAmount": 2,
-          "Resistances": {
-            "Arcane": 0,
-            "Fire": 0,
-            "Smash": 0,
-            "Slash": 0,
-            "Pierce": 0
-          }
-        },
-        "Side": 1,
-        "X": 5,
-        "Y": 2,
-        "MovesLeft": 2,
-        "Name": "SanFran",
-        "Attacked": false,
-        "Health": 50
-      },
-      {
-        "BaseUnit": {
-          "$type": "healer",
-          "HealingPower": 15,
-          "Health": 50,
-          "Attacks": [
-            {
-              "Damage": 10,
-              "AttacksAmount": 2,
-              "AttackName": "Holy magic",
-              "DamageType": 0,
-              "AttackType": 0
-            }
-          ],
-          "Type": "Acolyte",
-          "MovesAmount": 2,
-          "Resistances": {
-            "Arcane": 0,
-            "Fire": 0,
-            "Smash": 0,
-            "Slash": 0,
-            "Pierce": 0
-          }
-        },
-        "Side": 1,
-        "X": 5,
-        "Y": 3,
-        "MovesLeft": 2,
         "Name": "Maksim",
         "Attacked": false,
         "Health": 50
@@ -338,12 +116,19 @@
             {
               "Damage": 20,
               "AttacksAmount": 2,
-              "AttackName": "Sword slash",
-              "DamageType": 3,
+              "AttackName": "Angels touch",
+              "DamageType": 0,
+              "AttackType": 0
+            },
+            {
+              "Damage": 10,
+              "AttacksAmount": 1,
+              "AttackName": "Staff smash",
+              "DamageType": 4,
               "AttackType": 1
             }
           ],
-          "Type": "SwordAngel",
+          "Type": "AngelDeva",
           "MovesAmount": 3,
           "Resistances": {
             "Arcane": 0.5,
@@ -355,50 +140,19 @@
         },
         "Side": 1,
         "X": 5,
-        "Y": 4,
+        "Y": 3,
         "MovesLeft": 3,
-        "Name": "SanFran",
+        "Name": "Maksim",
         "Attacked": false,
         "Health": 60
-      },
-      {
-        "BaseUnit": {
-          "$type": "unit",
-          "Health": 80,
-          "Attacks": [
-            {
-              "Damage": 15,
-              "AttacksAmount": 2,
-              "AttackName": "Axe slash",
-              "DamageType": 3,
-              "AttackType": 1
-            }
-          ],
-          "Type": "Axer",
-          "MovesAmount": 2,
-          "Resistances": {
-            "Arcane": 0,
-            "Fire": 0,
-            "Smash": 0,
-            "Slash": 0.2,
-            "Pierce": 0.1
-          }
-        },
-        "Side": 1,
-        "X": 5,
-        "Y": 5,
-        "MovesLeft": 2,
-        "Name": "SanFran",
-        "Attacked": false,
-        "Health": 80
       }
     ],
-    "CurrentTurn": 2,
+    "CurrentTurn": 1,
     "PlayerConfig": {
       "FirstSide": 0,
       "SecondSide": 0
     },
-    "DateOfCreation": "2025-12-13T22:54:34.1889234+03:00"
+    "DateOfCreation": "2025-12-14T09:56:10.3951241+03:00"
   },
   {
     "Units": [
@@ -434,168 +188,41 @@
         },
         "Side": 0,
         "X": 0,
-        "Y": 2,
-        "MovesLeft": 0,
-        "Name": "Valera",
-        "Attacked": false,
-        "Health": 50
-      },
-      {
-        "BaseUnit": {
-          "$type": "healer",
-          "HealingPower": 15,
-          "Health": 50,
-          "Attacks": [
-            {
-              "Damage": 10,
-              "AttacksAmount": 2,
-              "AttackName": "Holy magic",
-              "DamageType": 0,
-              "AttackType": 0
-            }
-          ],
-          "Type": "Acolyte",
-          "MovesAmount": 2,
-          "Resistances": {
-            "Arcane": 0,
-            "Fire": 0,
-            "Smash": 0,
-            "Slash": 0,
-            "Pierce": 0
-          }
-        },
-        "Side": 0,
-        "X": 1,
-        "Y": 1,
-        "MovesLeft": 2,
-        "Name": "SanFran",
-        "Attacked": false,
-        "Health": 50
-      },
-      {
-        "BaseUnit": {
-          "$type": "unit",
-          "Health": 80,
-          "Attacks": [
-            {
-              "Damage": 15,
-              "AttacksAmount": 2,
-              "AttackName": "Axe slash",
-              "DamageType": 3,
-              "AttackType": 1
-            }
-          ],
-          "Type": "Axer",
-          "MovesAmount": 2,
-          "Resistances": {
-            "Arcane": 0,
-            "Fire": 0,
-            "Smash": 0,
-            "Slash": 0.2,
-            "Pierce": 0.1
-          }
-        },
-        "Side": 0,
-        "X": 3,
         "Y": 3,
-        "MovesLeft": 0,
+        "MovesLeft": 1,
         "Name": "Maksim",
         "Attacked": false,
-        "Health": 80
-      },
-      {
-        "BaseUnit": {
-          "$type": "healer",
-          "HealingPower": 15,
-          "Health": 50,
-          "Attacks": [
-            {
-              "Damage": 10,
-              "AttacksAmount": 2,
-              "AttackName": "Holy magic",
-              "DamageType": 0,
-              "AttackType": 0
-            }
-          ],
-          "Type": "Acolyte",
-          "MovesAmount": 2,
-          "Resistances": {
-            "Arcane": 0,
-            "Fire": 0,
-            "Smash": 0,
-            "Slash": 0,
-            "Pierce": 0
-          }
-        },
-        "Side": 0,
-        "X": 2,
-        "Y": 3,
-        "MovesLeft": 1,
-        "Name": "SanFran",
-        "Attacked": false,
         "Health": 50
       },
       {
         "BaseUnit": {
           "$type": "unit",
-          "Health": 80,
+          "Health": 60,
           "Attacks": [
             {
-              "Damage": 15,
+              "Damage": 20,
               "AttacksAmount": 2,
-              "AttackName": "Axe slash",
+              "AttackName": "Sword slash",
               "DamageType": 3,
               "AttackType": 1
             }
           ],
-          "Type": "Axer",
-          "MovesAmount": 2,
+          "Type": "SwordAngel",
+          "MovesAmount": 3,
           "Resistances": {
-            "Arcane": 0,
-            "Fire": 0,
-            "Smash": 0,
-            "Slash": 0.2,
-            "Pierce": 0.1
-          }
-        },
-        "Side": 0,
-        "X": 2,
-        "Y": 4,
-        "MovesLeft": 1,
-        "Name": "SanFran",
-        "Attacked": false,
-        "Health": 80
-      },
-      {
-        "BaseUnit": {
-          "$type": "healer",
-          "HealingPower": 15,
-          "Health": 50,
-          "Attacks": [
-            {
-              "Damage": 10,
-              "AttacksAmount": 2,
-              "AttackName": "Holy magic",
-              "DamageType": 0,
-              "AttackType": 0
-            }
-          ],
-          "Type": "Acolyte",
-          "MovesAmount": 2,
-          "Resistances": {
-            "Arcane": 0,
+            "Arcane": 0.5,
             "Fire": 0,
             "Smash": 0,
             "Slash": 0,
-            "Pierce": 0
+            "Pierce": -0.3
           }
         },
         "Side": 0,
-        "X": 1,
+        "X": 4,
         "Y": 3,
         "MovesLeft": 0,
-        "Name": "SanFran",
-        "Attacked": false,
+        "Name": "Valera",
+        "Attacked": true,
         "Health": 50
       },
       {
@@ -632,102 +259,93 @@
         "X": 6,
         "Y": 3,
         "MovesLeft": 1,
-        "Name": "Valera",
+        "Name": "Maksim",
         "Attacked": false,
         "Health": 50
       },
       {
         "BaseUnit": {
           "$type": "unit",
-          "Health": 90,
+          "Health": 60,
           "Attacks": [
             {
-              "Damage": 30,
+              "Damage": 20,
+              "AttacksAmount": 2,
+              "AttackName": "Angels touch",
+              "DamageType": 0,
+              "AttackType": 0
+            },
+            {
+              "Damage": 10,
               "AttacksAmount": 1,
-              "AttackName": "Hammer smash",
+              "AttackName": "Staff smash",
               "DamageType": 4,
               "AttackType": 1
             }
           ],
-          "Type": "Paladin",
-          "MovesAmount": 1,
+          "Type": "AngelDeva",
+          "MovesAmount": 3,
           "Resistances": {
-            "Arcane": 0,
-            "Fire": -0.5,
-            "Smash": 0.2,
-            "Slash": 0.3,
-            "Pierce": 0.4
-          }
-        },
-        "Side": 1,
-        "X": 5,
-        "Y": 1,
-        "MovesLeft": 1,
-        "Name": "SanFran",
-        "Attacked": false,
-        "Health": 90
-      },
-      {
-        "BaseUnit": {
-          "$type": "healer",
-          "HealingPower": 15,
-          "Health": 50,
-          "Attacks": [
-            {
-              "Damage": 10,
-              "AttacksAmount": 2,
-              "AttackName": "Holy magic",
-              "DamageType": 0,
-              "AttackType": 0
-            }
-          ],
-          "Type": "Acolyte",
-          "MovesAmount": 2,
-          "Resistances": {
-            "Arcane": 0,
+            "Arcane": 0.5,
             "Fire": 0,
             "Smash": 0,
             "Slash": 0,
-            "Pierce": 0
-          }
-        },
-        "Side": 1,
-        "X": 5,
-        "Y": 2,
-        "MovesLeft": 2,
-        "Name": "SanFran",
-        "Attacked": false,
-        "Health": 50
-      },
-      {
-        "BaseUnit": {
-          "$type": "healer",
-          "HealingPower": 15,
-          "Health": 50,
-          "Attacks": [
-            {
-              "Damage": 10,
-              "AttacksAmount": 2,
-              "AttackName": "Holy magic",
-              "DamageType": 0,
-              "AttackType": 0
-            }
-          ],
-          "Type": "Acolyte",
-          "MovesAmount": 2,
-          "Resistances": {
-            "Arcane": 0,
-            "Fire": 0,
-            "Smash": 0,
-            "Slash": 0,
-            "Pierce": 0
+            "Pierce": -0.3
           }
         },
         "Side": 1,
         "X": 5,
         "Y": 3,
-        "MovesLeft": 2,
+        "MovesLeft": 3,
         "Name": "Maksim",
+        "Attacked": false,
+        "Health": 20
+      }
+    ],
+    "CurrentTurn": 1,
+    "PlayerConfig": {
+      "FirstSide": 0,
+      "SecondSide": 0
+    },
+    "DateOfCreation": "2025-12-14T09:56:18.6739319+03:00"
+  },
+  {
+    "Units": [
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 50,
+          "Attacks": [
+            {
+              "Damage": 5,
+              "AttacksAmount": 1,
+              "AttackName": "Fist strike",
+              "DamageType": 4,
+              "AttackType": 1
+            },
+            {
+              "Damage": 10,
+              "AttacksAmount": 2,
+              "AttackName": "Holy magic",
+              "DamageType": 0,
+              "AttackType": 0
+            }
+          ],
+          "Type": "Priest",
+          "MovesAmount": 1,
+          "Resistances": {
+            "Arcane": 0.5,
+            "Fire": 0,
+            "Smash": 0,
+            "Slash": 0,
+            "Pierce": 0
+          }
+        },
+        "Side": 0,
+        "X": 1,
+        "Y": 2,
+        "MovesLeft": 1,
+        "Name": "Valera",
         "Attacked": false,
         "Health": 50
       },
@@ -754,51 +372,207 @@
             "Pierce": -0.3
           }
         },
-        "Side": 1,
-        "X": 5,
-        "Y": 4,
+        "Side": 0,
+        "X": 2,
+        "Y": 3,
         "MovesLeft": 3,
         "Name": "SanFran",
         "Attacked": false,
-        "Health": 60
+        "Health": 15
       },
       {
         "BaseUnit": {
           "$type": "unit",
-          "Health": 80,
+          "Health": 50,
           "Attacks": [
             {
-              "Damage": 15,
+              "Damage": 5,
+              "AttacksAmount": 1,
+              "AttackName": "Fist strike",
+              "DamageType": 4,
+              "AttackType": 1
+            },
+            {
+              "Damage": 10,
               "AttacksAmount": 2,
-              "AttackName": "Axe slash",
-              "DamageType": 3,
+              "AttackName": "Holy magic",
+              "DamageType": 0,
+              "AttackType": 0
+            }
+          ],
+          "Type": "Priest",
+          "MovesAmount": 1,
+          "Resistances": {
+            "Arcane": 0.5,
+            "Fire": 0,
+            "Smash": 0,
+            "Slash": 0,
+            "Pierce": 0
+          }
+        },
+        "Side": 1,
+        "X": 3,
+        "Y": 2,
+        "MovesLeft": 0,
+        "Name": "SanFran",
+        "Attacked": false,
+        "Health": 50
+      }
+    ],
+    "CurrentTurn": 7,
+    "PlayerConfig": {
+      "FirstSide": 0,
+      "SecondSide": 1
+    },
+    "DateOfCreation": "2025-12-14T09:57:01.7710395+03:00"
+  },
+  {
+    "Units": [
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 50,
+          "Attacks": [
+            {
+              "Damage": 5,
+              "AttacksAmount": 1,
+              "AttackName": "Fist strike",
+              "DamageType": 4,
+              "AttackType": 1
+            },
+            {
+              "Damage": 10,
+              "AttacksAmount": 2,
+              "AttackName": "Holy magic",
+              "DamageType": 0,
+              "AttackType": 0
+            }
+          ],
+          "Type": "Priest",
+          "MovesAmount": 1,
+          "Resistances": {
+            "Arcane": 0.5,
+            "Fire": 0,
+            "Smash": 0,
+            "Slash": 0,
+            "Pierce": 0
+          }
+        },
+        "Side": 0,
+        "X": 1,
+        "Y": 3,
+        "MovesLeft": 1,
+        "Name": "Maksim",
+        "Attacked": false,
+        "Health": 50
+      },
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 90,
+          "Attacks": [
+            {
+              "Damage": 30,
+              "AttacksAmount": 1,
+              "AttackName": "Hammer smash",
+              "DamageType": 4,
               "AttackType": 1
             }
           ],
-          "Type": "Axer",
+          "Type": "Paladin",
+          "MovesAmount": 1,
+          "Resistances": {
+            "Arcane": 0,
+            "Fire": -0.5,
+            "Smash": 0.2,
+            "Slash": 0.3,
+            "Pierce": 0.4
+          }
+        },
+        "Side": 0,
+        "X": 3,
+        "Y": 3,
+        "MovesLeft": 1,
+        "Name": "Maksim",
+        "Attacked": true,
+        "Health": 82
+      },
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 50,
+          "Attacks": [
+            {
+              "Damage": 5,
+              "AttacksAmount": 1,
+              "AttackName": "Fist strike",
+              "DamageType": 4,
+              "AttackType": 1
+            },
+            {
+              "Damage": 10,
+              "AttacksAmount": 2,
+              "AttackName": "Holy magic",
+              "DamageType": 0,
+              "AttackType": 0
+            }
+          ],
+          "Type": "Priest",
+          "MovesAmount": 1,
+          "Resistances": {
+            "Arcane": 0.5,
+            "Fire": 0,
+            "Smash": 0,
+            "Slash": 0,
+            "Pierce": 0
+          }
+        },
+        "Side": 1,
+        "X": 4,
+        "Y": 3,
+        "MovesLeft": 1,
+        "Name": "Valera",
+        "Attacked": false,
+        "Health": 20
+      },
+      {
+        "BaseUnit": {
+          "$type": "healer",
+          "HealingPower": 15,
+          "Health": 50,
+          "Attacks": [
+            {
+              "Damage": 10,
+              "AttacksAmount": 2,
+              "AttackName": "Holy magic",
+              "DamageType": 0,
+              "AttackType": 0
+            }
+          ],
+          "Type": "Acolyte",
           "MovesAmount": 2,
           "Resistances": {
             "Arcane": 0,
             "Fire": 0,
             "Smash": 0,
-            "Slash": 0.2,
-            "Pierce": 0.1
+            "Slash": 0,
+            "Pierce": 0
           }
         },
         "Side": 1,
-        "X": 5,
-        "Y": 5,
+        "X": 3,
+        "Y": 4,
         "MovesLeft": 2,
         "Name": "SanFran",
         "Attacked": false,
-        "Health": 80
+        "Health": 50
       }
     ],
-    "CurrentTurn": 0,
+    "CurrentTurn": 9,
     "PlayerConfig": {
       "FirstSide": 0,
       "SecondSide": 0
     },
-    "DateOfCreation": "2025-12-13T22:54:50.3047882+03:00"
+    "DateOfCreation": "2025-12-14T10:14:26.6363282+03:00"
   }
 ]

@@ -9,7 +9,7 @@ namespace backend.Services
     public class UnitGenerator
     {
         Dictionary<(int, int), Unit> unitMap;
-        const int UNITS_NUMBER = 5;
+        const int UNITS_NUMBER = 1;
         public UnitGenerator(Dictionary<(int, int),Unit> UnitMap)
         {
             unitMap = UnitMap;

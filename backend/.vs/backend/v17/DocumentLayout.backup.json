@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "D:\\DEV\\CourseWork\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\games.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:games.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\gameconfig\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:gameconfig\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,24 +11,52 @@
       "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:infrastructure\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\services\\unitgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:services\\unitgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\entities\\leader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:entities\\leader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\entities\\healer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:entities\\healer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\entities\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:entities\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\games.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:games.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\dtoes\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:dtoes\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\controllers\\unitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:controllers\\unitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\services\\moveengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:services\\moveengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\dtoes\\fightrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:dtoes\\fightrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\gameconfig\\playerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:gameconfig\\playerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\services\\unitgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:services\\unitgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\entities\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:entities\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\infrastructure\\myjsonserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,22 +75,6 @@
       "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:dtoes\\movesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\dtoes\\fightrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:dtoes\\fightrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\controllers\\unitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:controllers\\unitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\services\\moveengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:services\\moveengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\entities\\healer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:entities\\healer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\templates\\healertemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:templates\\healertemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -85,10 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\services\\pathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:services\\pathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\entities\\leader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|solutionrelative:entities\\leader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}|backend.csproj|d:\\dev\\coursework\\backend\\entities\\enemieshex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -110,63 +110,120 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "PlayerConfig.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\GameConfig\\PlayerConfig.cs",
-              "RelativeDocumentMoniker": "GameConfig\\PlayerConfig.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\GameConfig\\PlayerConfig.cs",
-              "RelativeToolTip": "GameConfig\\PlayerConfig.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA3wBwAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T15:14:12.366Z",
-              "EditorCaption": ""
+              "Title": "games.json",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\games.json",
+              "RelativeDocumentMoniker": "games.json",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\games.json",
+              "RelativeToolTip": "games.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKsBAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-13T10:08:25.41Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "GameState.cs",
               "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\GameConfig\\GameState.cs",
               "RelativeDocumentMoniker": "GameConfig\\GameState.cs",
               "ToolTip": "D:\\DEV\\CourseWork\\backend\\GameConfig\\GameState.cs",
               "RelativeToolTip": "GameConfig\\GameState.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwA0AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-12T19:42:23.945Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GameDTO.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\DTOes\\GameDTO.cs",
-              "RelativeDocumentMoniker": "DTOes\\GameDTO.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\DTOes\\GameDTO.cs",
-              "RelativeToolTip": "DTOes\\GameDTO.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAA8AAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "MoveEngine.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Services\\MoveEngine.cs",
+              "RelativeDocumentMoniker": "Services\\MoveEngine.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Services\\MoveEngine.cs",
+              "RelativeToolTip": "Services\\MoveEngine.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAwwA4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T19:22:13.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-09T16:28:21.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Unit.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Entities\\Unit.cs",
+              "RelativeDocumentMoniker": "Entities\\Unit.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Entities\\Unit.cs",
+              "RelativeToolTip": "Entities\\Unit.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAcwC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T09:44:43.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameRepository.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Infrastructure\\GameRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\GameRepository.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Infrastructure\\GameRepository.cs",
+              "RelativeToolTip": "Infrastructure\\GameRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T16:17:03.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Leader.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Entities\\Leader.cs",
+              "RelativeDocumentMoniker": "Entities\\Leader.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Entities\\Leader.cs",
+              "RelativeToolTip": "Entities\\Leader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T09:44:50.097Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADQAAAApAAAAAAAAAA==",
+              "Title": "Healer.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Entities\\Healer.cs",
+              "RelativeDocumentMoniker": "Entities\\Healer.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Entities\\Healer.cs",
+              "RelativeToolTip": "Entities\\Healer.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwBAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T14:41:45.163Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-09T09:44:20.085Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
+              "Title": "UnitController.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Controllers\\UnitController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UnitController.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Controllers\\UnitController.cs",
+              "RelativeToolTip": "Controllers\\UnitController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T14:28:41.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UnitGenerator.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Services\\UnitGenerator.cs",
+              "RelativeDocumentMoniker": "Services\\UnitGenerator.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Services\\UnitGenerator.cs",
+              "RelativeToolTip": "Services\\UnitGenerator.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T17:28:18.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "MyJsonSerializer.cs",
               "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Infrastructure\\MyJsonSerializer.cs",
               "RelativeDocumentMoniker": "Infrastructure\\MyJsonSerializer.cs",
@@ -174,127 +231,23 @@
               "RelativeToolTip": "Infrastructure\\MyJsonSerializer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T16:18:38.331Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "games.json",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\games.json",
-              "RelativeDocumentMoniker": "games.json",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\games.json",
-              "RelativeToolTip": "games.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-13T10:08:25.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Unit.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Entities\\Unit.cs",
-              "RelativeDocumentMoniker": "Entities\\Unit.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Entities\\Unit.cs",
-              "RelativeToolTip": "Entities\\Unit.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBIAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T09:44:43.2Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameRepository.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Infrastructure\\GameRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\GameRepository.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Infrastructure\\GameRepository.cs",
-              "RelativeToolTip": "Infrastructure\\GameRepository.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T16:17:03.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GameController.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Controllers\\GameController.cs",
-              "RelativeDocumentMoniker": "Controllers\\GameController.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Controllers\\GameController.cs",
-              "RelativeToolTip": "Controllers\\GameController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAowCgAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T08:50:56.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-12T16:18:38.331Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "UnitGenerator.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Services\\UnitGenerator.cs",
-              "RelativeDocumentMoniker": "Services\\UnitGenerator.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Services\\UnitGenerator.cs",
-              "RelativeToolTip": "Services\\UnitGenerator.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAA4AAAAAAAAAA==",
+              "Title": "GameDTO.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\DTOes\\GameDTO.cs",
+              "RelativeDocumentMoniker": "DTOes\\GameDTO.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\DTOes\\GameDTO.cs",
+              "RelativeToolTip": "DTOes\\GameDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T17:28:18.148Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MovesDTO.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\DTOes\\MovesDTO.cs",
-              "RelativeDocumentMoniker": "DTOes\\MovesDTO.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\DTOes\\MovesDTO.cs",
-              "RelativeToolTip": "DTOes\\MovesDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T12:23:45.813Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AI.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Services\\AI.cs",
-              "RelativeDocumentMoniker": "Services\\AI.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Services\\AI.cs",
-              "RelativeToolTip": "Services\\AI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T13:51:44.596Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UnitController.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Controllers\\UnitController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UnitController.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Controllers\\UnitController.cs",
-              "RelativeToolTip": "Controllers\\UnitController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T14:28:41.857Z"
+              "WhenOpened": "2025-12-12T19:22:13.399Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "UnitTemplate.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Templates\\UnitTemplate.cs",
-              "RelativeDocumentMoniker": "Templates\\UnitTemplate.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Templates\\UnitTemplate.cs",
-              "RelativeToolTip": "Templates\\UnitTemplate.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T15:05:31.391Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "FightRequestDTO.cs",
               "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\DTOes\\FightRequestDTO.cs",
               "RelativeDocumentMoniker": "DTOes\\FightRequestDTO.cs",
@@ -306,20 +259,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MoveEngine.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Services\\MoveEngine.cs",
-              "RelativeDocumentMoniker": "Services\\MoveEngine.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Services\\MoveEngine.cs",
-              "RelativeToolTip": "Services\\MoveEngine.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAwwBwAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "GameController.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Controllers\\GameController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GameController.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Controllers\\GameController.cs",
+              "RelativeToolTip": "Controllers\\GameController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T16:28:21.585Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T06:21:50.555Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T14:41:45.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PlayerConfig.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\GameConfig\\PlayerConfig.cs",
+              "RelativeDocumentMoniker": "GameConfig\\PlayerConfig.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\GameConfig\\PlayerConfig.cs",
+              "RelativeToolTip": "GameConfig\\PlayerConfig.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA3wBwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T15:14:12.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MovesDTO.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\DTOes\\MovesDTO.cs",
+              "RelativeDocumentMoniker": "DTOes\\MovesDTO.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\DTOes\\MovesDTO.cs",
+              "RelativeToolTip": "DTOes\\MovesDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T12:23:45.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AI.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Services\\AI.cs",
+              "RelativeDocumentMoniker": "Services\\AI.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Services\\AI.cs",
+              "RelativeToolTip": "Services\\AI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T13:51:44.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UnitTemplate.cs",
+              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Templates\\UnitTemplate.cs",
+              "RelativeDocumentMoniker": "Templates\\UnitTemplate.cs",
+              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Templates\\UnitTemplate.cs",
+              "RelativeToolTip": "Templates\\UnitTemplate.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T15:05:31.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "PathFinder.cs",
               "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Services\\PathFinder.cs",
               "RelativeDocumentMoniker": "Services\\PathFinder.cs",
@@ -331,19 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Healer.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Entities\\Healer.cs",
-              "RelativeDocumentMoniker": "Entities\\Healer.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Entities\\Healer.cs",
-              "RelativeToolTip": "Entities\\Healer.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T09:44:20.085Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "HealerTemplate.cs",
               "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Templates\\HealerTemplate.cs",
               "RelativeDocumentMoniker": "Templates\\HealerTemplate.cs",
@@ -355,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "UnitTemplates.cs",
               "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Templates\\UnitTemplates.cs",
               "RelativeDocumentMoniker": "Templates\\UnitTemplates.cs",
@@ -367,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "BattleEngine.cs",
               "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Services\\BattleEngine.cs",
               "RelativeDocumentMoniker": "Services\\BattleEngine.cs",
@@ -375,20 +375,7 @@
               "RelativeToolTip": "Services\\BattleEngine.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T17:24:41.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Leader.cs",
-              "DocumentMoniker": "D:\\DEV\\CourseWork\\backend\\Entities\\Leader.cs",
-              "RelativeDocumentMoniker": "Entities\\Leader.cs",
-              "ToolTip": "D:\\DEV\\CourseWork\\backend\\Entities\\Leader.cs",
-              "RelativeToolTip": "Entities\\Leader.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T09:44:50.097Z"
+              "WhenOpened": "2025-12-09T17:24:41.259Z"
             },
             {
               "$type": "Document",
