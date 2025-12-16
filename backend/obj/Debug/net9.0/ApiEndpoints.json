@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Boolean",
+        "Type": "backend.DTOes.AIResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",

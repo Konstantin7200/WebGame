@@ -11,28 +11,20 @@ namespace backend.Services
             _unitMap = unitMap;
         }
 
-        public bool start(Unit.UnitSide currentTurn)
+        public (bool,bool) start(Unit.UnitSide currentTurn)
         {
-            /*foreach(var unit in _unitMap.Values)
-            {
-                if(unit.Side==currentTurn.currentTurn)
-                {
-                    Console.WriteLine(unit.X + " " + unit.Y+" "+unit.MovesLeft+" "+unit.attacked);
-                }
-            }
-            Console.WriteLine("______________________________________");*/
             foreach(var unit in _unitMap.Values)
             {
                 if (unit.Side == currentTurn && unit.MovesLeft != 0&&!unit.Attacked)
                 {
-                    makeAMove(unit);
-                    return true;
+                    
+                    return (true, makeAMove(unit));
                 }
             }
-            return false;
+            return (false,false);
 
         }
-        public void makeAMove(Unit myUnit)
+        public bool makeAMove(Unit myUnit)
         {
             MoveEngine moveEngine = new MoveEngine();
             MovesDTO moves=moveEngine.getAllMoves(_unitMap,myUnit,myUnit.Side);
@@ -44,11 +36,13 @@ namespace backend.Services
                 moveEngine.moveToHex(myUnit, _unitMap, hexToStepOn);
                 (Attack, Attack) attackPair = pickAttack(myUnit, pickedUnit);
                 BattleEngine.fight(myUnit, pickedUnit, attackPair.Item1, attackPair.Item2,_unitMap);
+                return true;
             }
             else
             {
                 if (!moveEngine.moveToClosestEnemy(myUnit, _unitMap))
                     moveRandomly(moves,myUnit);
+                return false;
             }
         }
         public (Unit?,Hex?) findTheBestOpponent(List<EnemiesHex> enemiesHexes)
@@ -109,10 +103,6 @@ namespace backend.Services
             int damageDiff = (int)(attackersAttack.Damage * attackersAttack.AttacksAmount* (1 - defender.BaseUnit.Resistances[attackersAttack.DamageType])) - (int)(defendersAttack.Damage * defendersAttack.AttacksAmount* (1 - attacker.BaseUnit.Resistances[defendersAttack.DamageType]));
             return (value, damageDiff);
         }
-        /*public void moveToTheEnemyLeader()
-        {
-
-        }*/
         public void moveRandomly(MovesDTO moves,Unit myUnit)
         {
             MoveEngine pathFinder = new MoveEngine();

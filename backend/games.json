@@ -574,5 +574,429 @@
       "SecondSide": 0
     },
     "DateOfCreation": "2025-12-14T10:14:26.6363282+03:00"
+  },
+  {
+    "Units": [
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 50,
+          "Attacks": [
+            {
+              "Damage": 5,
+              "AttacksAmount": 1,
+              "AttackName": "Fist strike",
+              "DamageType": 4,
+              "AttackType": 1
+            },
+            {
+              "Damage": 10,
+              "AttacksAmount": 2,
+              "AttackName": "Holy magic",
+              "DamageType": 0,
+              "AttackType": 0
+            }
+          ],
+          "Type": "Priest",
+          "MovesAmount": 1,
+          "Resistances": {
+            "Arcane": 0.5,
+            "Fire": 0,
+            "Smash": 0,
+            "Slash": 0,
+            "Pierce": 0
+          }
+        },
+        "Side": 0,
+        "X": 1,
+        "Y": 3,
+        "MovesLeft": 0,
+        "Name": "SanFran",
+        "Attacked": false,
+        "Health": 50
+      },
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 90,
+          "Attacks": [
+            {
+              "Damage": 30,
+              "AttacksAmount": 1,
+              "AttackName": "Hammer smash",
+              "DamageType": 4,
+              "AttackType": 1
+            }
+          ],
+          "Type": "Paladin",
+          "MovesAmount": 1,
+          "Resistances": {
+            "Arcane": 0,
+            "Fire": -0.5,
+            "Smash": 0.2,
+            "Slash": 0.3,
+            "Pierce": 0.4
+          }
+        },
+        "Side": 0,
+        "X": 2,
+        "Y": 1,
+        "MovesLeft": 0,
+        "Name": "Valera",
+        "Attacked": false,
+        "Health": 90
+      },
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 60,
+          "Attacks": [
+            {
+              "Damage": 20,
+              "AttacksAmount": 2,
+              "AttackName": "Sword slash",
+              "DamageType": 3,
+              "AttackType": 1
+            }
+          ],
+          "Type": "SwordAngel",
+          "MovesAmount": 3,
+          "Resistances": {
+            "Arcane": 0.5,
+            "Fire": 0,
+            "Smash": 0,
+            "Slash": 0,
+            "Pierce": -0.3
+          }
+        },
+        "Side": 0,
+        "X": 1,
+        "Y": 2,
+        "MovesLeft": 3,
+        "Name": "SanFran",
+        "Attacked": false,
+        "Health": 60
+      },
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 60,
+          "Attacks": [
+            {
+              "Damage": 20,
+              "AttacksAmount": 2,
+              "AttackName": "Angels touch",
+              "DamageType": 0,
+              "AttackType": 0
+            },
+            {
+              "Damage": 10,
+              "AttacksAmount": 1,
+              "AttackName": "Staff smash",
+              "DamageType": 4,
+              "AttackType": 1
+            }
+          ],
+          "Type": "AngelDeva",
+          "MovesAmount": 3,
+          "Resistances": {
+            "Arcane": 0.5,
+            "Fire": 0,
+            "Smash": 0,
+            "Slash": 0,
+            "Pierce": -0.3
+          }
+        },
+        "Side": 0,
+        "X": 1,
+        "Y": 4,
+        "MovesLeft": 2,
+        "Name": "SanFran",
+        "Attacked": false,
+        "Health": 60
+      },
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 60,
+          "Attacks": [
+            {
+              "Damage": 20,
+              "AttacksAmount": 2,
+              "AttackName": "Sword slash",
+              "DamageType": 3,
+              "AttackType": 1
+            }
+          ],
+          "Type": "SwordAngel",
+          "MovesAmount": 3,
+          "Resistances": {
+            "Arcane": 0.5,
+            "Fire": 0,
+            "Smash": 0,
+            "Slash": 0,
+            "Pierce": -0.3
+          }
+        },
+        "Side": 0,
+        "X": 2,
+        "Y": 4,
+        "MovesLeft": 2,
+        "Name": "Maksim",
+        "Attacked": false,
+        "Health": 60
+      },
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 80,
+          "Attacks": [
+            {
+              "Damage": 15,
+              "AttacksAmount": 2,
+              "AttackName": "Axe slash",
+              "DamageType": 3,
+              "AttackType": 1
+            }
+          ],
+          "Type": "Axer",
+          "MovesAmount": 2,
+          "Resistances": {
+            "Arcane": 0,
+            "Fire": 0,
+            "Smash": 0,
+            "Slash": 0.2,
+            "Pierce": 0.1
+          }
+        },
+        "Side": 0,
+        "X": 2,
+        "Y": 3,
+        "MovesLeft": 0,
+        "Name": "SanFran",
+        "Attacked": false,
+        "Health": 80
+      },
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 50,
+          "Attacks": [
+            {
+              "Damage": 5,
+              "AttacksAmount": 1,
+              "AttackName": "Fist strike",
+              "DamageType": 4,
+              "AttackType": 1
+            },
+            {
+              "Damage": 10,
+              "AttacksAmount": 2,
+              "AttackName": "Holy magic",
+              "DamageType": 0,
+              "AttackType": 0
+            }
+          ],
+          "Type": "Priest",
+          "MovesAmount": 1,
+          "Resistances": {
+            "Arcane": 0.5,
+            "Fire": 0,
+            "Smash": 0,
+            "Slash": 0,
+            "Pierce": 0
+          }
+        },
+        "Side": 1,
+        "X": 5,
+        "Y": 3,
+        "MovesLeft": 0,
+        "Name": "Valera",
+        "Attacked": false,
+        "Health": 50
+      },
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 60,
+          "Attacks": [
+            {
+              "Damage": 20,
+              "AttacksAmount": 2,
+              "AttackName": "Angels touch",
+              "DamageType": 0,
+              "AttackType": 0
+            },
+            {
+              "Damage": 10,
+              "AttacksAmount": 1,
+              "AttackName": "Staff smash",
+              "DamageType": 4,
+              "AttackType": 1
+            }
+          ],
+          "Type": "AngelDeva",
+          "MovesAmount": 3,
+          "Resistances": {
+            "Arcane": 0.5,
+            "Fire": 0,
+            "Smash": 0,
+            "Slash": 0,
+            "Pierce": -0.3
+          }
+        },
+        "Side": 1,
+        "X": 5,
+        "Y": 1,
+        "MovesLeft": 3,
+        "Name": "Valera",
+        "Attacked": false,
+        "Health": 60
+      },
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 90,
+          "Attacks": [
+            {
+              "Damage": 30,
+              "AttacksAmount": 1,
+              "AttackName": "Hammer smash",
+              "DamageType": 4,
+              "AttackType": 1
+            }
+          ],
+          "Type": "Paladin",
+          "MovesAmount": 1,
+          "Resistances": {
+            "Arcane": 0,
+            "Fire": -0.5,
+            "Smash": 0.2,
+            "Slash": 0.3,
+            "Pierce": 0.4
+          }
+        },
+        "Side": 1,
+        "X": 4,
+        "Y": 2,
+        "MovesLeft": 0,
+        "Name": "Maksim",
+        "Attacked": false,
+        "Health": 90
+      },
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 60,
+          "Attacks": [
+            {
+              "Damage": 20,
+              "AttacksAmount": 2,
+              "AttackName": "Angels touch",
+              "DamageType": 0,
+              "AttackType": 0
+            },
+            {
+              "Damage": 10,
+              "AttacksAmount": 1,
+              "AttackName": "Staff smash",
+              "DamageType": 4,
+              "AttackType": 1
+            }
+          ],
+          "Type": "AngelDeva",
+          "MovesAmount": 3,
+          "Resistances": {
+            "Arcane": 0.5,
+            "Fire": 0,
+            "Smash": 0,
+            "Slash": 0,
+            "Pierce": -0.3
+          }
+        },
+        "Side": 1,
+        "X": 4,
+        "Y": 3,
+        "MovesLeft": 2,
+        "Name": "Maksim",
+        "Attacked": false,
+        "Health": 60
+      },
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 60,
+          "Attacks": [
+            {
+              "Damage": 20,
+              "AttacksAmount": 2,
+              "AttackName": "Sword slash",
+              "DamageType": 3,
+              "AttackType": 1
+            }
+          ],
+          "Type": "SwordAngel",
+          "MovesAmount": 3,
+          "Resistances": {
+            "Arcane": 0.5,
+            "Fire": 0,
+            "Smash": 0,
+            "Slash": 0,
+            "Pierce": -0.3
+          }
+        },
+        "Side": 1,
+        "X": 4,
+        "Y": 4,
+        "MovesLeft": 2,
+        "Name": "SanFran",
+        "Attacked": false,
+        "Health": 60
+      },
+      {
+        "BaseUnit": {
+          "$type": "unit",
+          "Health": 60,
+          "Attacks": [
+            {
+              "Damage": 20,
+              "AttacksAmount": 2,
+              "AttackName": "Angels touch",
+              "DamageType": 0,
+              "AttackType": 0
+            },
+            {
+              "Damage": 10,
+              "AttacksAmount": 1,
+              "AttackName": "Staff smash",
+              "DamageType": 4,
+              "AttackType": 1
+            }
+          ],
+          "Type": "AngelDeva",
+          "MovesAmount": 3,
+          "Resistances": {
+            "Arcane": 0.5,
+            "Fire": 0,
+            "Smash": 0,
+            "Slash": 0,
+            "Pierce": -0.3
+          }
+        },
+        "Side": 1,
+        "X": 5,
+        "Y": 4,
+        "MovesLeft": 2,
+        "Name": "Maksim",
+        "Attacked": false,
+        "Health": 60
+      }
+    ],
+    "CurrentTurn": 2,
+    "PlayerConfig": {
+      "FirstSide": 0,
+      "SecondSide": 0
+    },
+    "DateOfCreation": "2025-12-15T16:47:03.5603421+03:00"
   }
 ]

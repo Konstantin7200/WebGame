@@ -25,10 +25,10 @@ namespace backend.Controllers
             _gameState.endTurn();
         }
         [HttpPost("AIMove")]
-        public bool makeAITurn()
+        public AIResponse makeAITurn()
         {
             AI ai = new AI(_gameState.UnitMap);
-            return ai.start(_gameState.CurrentSide);
+            return new AIResponse(ai.start(_gameState.CurrentSide));
         }
         [HttpGet("isNextPlayerAI")]
         public bool isNextPlayerAI()

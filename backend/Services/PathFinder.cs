@@ -56,13 +56,13 @@ namespace backend.Services
         {
             (int X, int Y) hex = new();
             markControlZones(unitMap,pickedUnit, hexMas);
-            
+
             hex = (pickedUnit.X, pickedUnit.Y);
-            Queue<(int, int)> queue = new();
-            queue.Enqueue(hex);
             int[,] movesToReachMas = new int[MAPSIZE, MAPSIZE];
             movesToReachMas[hex.X, hex.Y] = 0;
             hexMas[hex.X, hex.Y] = 0;
+            Queue<(int, int)> queue = new();
+            queue.Enqueue(hex);
             while (queue.Count != 0)
             {
                 hex = queue.Dequeue();
